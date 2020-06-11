@@ -1,6 +1,6 @@
 {
   "name": "vue-suite-demo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -23,17 +23,31 @@
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
-    "@vue/cli-plugin-pwa": "~4.3.0",
-    "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-vue": "^2.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-loader": "^15.9.2",
-    "vue-template-compiler": "^2.6.11",
-    "eslint-plugin-import": "^2.20.2",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2"
-  }
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
