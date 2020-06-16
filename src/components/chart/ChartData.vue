@@ -21,7 +21,8 @@ export default {
       if (action === "reset") {
         this.data.removeAll();
         this.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
-      } else if (action === "remove") {
+      }
+      else if (action === "remove") {
         this.data.remove(this.data.getId(0));
       }
     }
@@ -52,11 +53,11 @@ export default {
       ],
     });
 
-    this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
+    this.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
   },
   beforeDestroy() {
-		if (this.chart && this.chart.destroy) {
-      this.chart.destroy();
+		if (this.chart) {
+      this.chart.destructor();
     }
 	}
 }

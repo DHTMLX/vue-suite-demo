@@ -13,8 +13,8 @@ export default {
     this.colorpicker = new ColorpickerDHX(this.$refs.colorpicker);
   },
   beforeDestroy() {
-		if (this.colorpicker && this.colorpicker.destroy) {
-      this.colorpicker.destroy();
+		if (this.colorpicker) {
+      this.colorpicker.destructor();
     }
 	}
 }

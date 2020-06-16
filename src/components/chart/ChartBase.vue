@@ -39,8 +39,8 @@ export default {
     this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
   },
   beforeDestroy() {
-		if (this.chart && this.chart.destroy) {
-      this.chart.destroy();
+		if (this.chart) {
+      this.chart.destructor();
     }
 	}
 }

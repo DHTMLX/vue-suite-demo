@@ -14,72 +14,67 @@
 </template>
 
 <script>
-import fromCDN from "from-cdn";
+import { Chart as ChartDHX } from 'dhx-suite';
 export default {
-  name: "ChartBase",
+  name: "ChartEvents",
   data: () => ({
     events: [],
     chart: null
   }),
-  async mounted() {
-    await fromCDN([
-      "https://cdn.dhtmlx.com/suite/edge/suite.js",
-      "https://cdn.dhtmlx.com/suite/edge/suite.css",
-    ]).then(() => {
-      // eslint-disable-next-line no-undef
-      this.chart = new dhx.Chart(this.$refs.chart, {
-        type: "bar",
-        resizable: true,
-        scales: {
-          bottom: {
-            text: "month",
-          },
-          left: {
-            maxTicks: 10,
-            max: 100,
-            min: 0,
-          },
+  mounted() {
+    this.chart = new ChartDHX(this.$refs.chart, {
+      type: "bar",
+      resizable: true,
+      scales: {
+        bottom: {
+          text: "month",
         },
-        series: [
-          {
-            id: "A",
-            value: "company A",
-            color: "#81C4E8",
-            fill: "#81C4E8"
-          },
-          {
-            id: "B",
-            value: "company B",
-            color: "#5E83BA",
-            fill: "#5E83BA"
-          },
-        ],
-        legend: {
-          series: ["A", "B"],
-          halign: "right",
-          valign: "top"
-        }
-      });
-      this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
+        left: {
+          maxTicks: 10,
+          max: 100,
+          min: 0,
+        },
+      },
+      series: [
+        {
+          id: "A",
+          value: "company A",
+          color: "#81C4E8",
+          fill: "#81C4E8"
+        },
+        {
+          id: "B",
+          value: "company B",
+          color: "#5E83BA",
+          fill: "#5E83BA"
+        },
+      ],
+      legend: {
+        series: ["A", "B"],
+        halign: "right",
+        valign: "top"
+      }
+    });
 
-      this.chart.events.on('toggleSeries', (id) => {
-        const keyId = Math.random();
-        this.events = [ { keyId, name: "toggleSeries", value: id } ].concat(this.events);
-      });
-      this.chart.events.on('resize', (size) => {
-        const keyId = Math.random();
-        this.events = [ { keyId, name: "resize", value: JSON.stringify(size) } ].concat(this.events);
-      });
-      this.chart.events.on('serieClick', (id, value) => {
-        const infoSerieClick = { id, value };
-        const keyId = Math.random();
-        this.events = [ { keyId, name: "serieClick", value: infoSerieClick } ].concat(this.events);
-      });
-    })
+    this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
+
+    this.chart.events.on("toggleSeries", (id) => {
+      const keyId = Math.random();
+      this.events = [ { keyId, name: "toggleSeries", value: id } ].concat(this.events);
+    });
+    this.chart.events.on("resize", (size) => {
+      const keyId = Math.random();
+      this.events = [ { keyId, name: "resize", value: JSON.stringify(size) } ].concat(this.events);
+    });
+    this.chart.events.on("serieClick", (id, value) => {
+      const infoSerieClick = { id, value };
+      const keyId = Math.random();
+      this.events = [ { keyId, name: "serieClick", value: infoSerieClick } ].concat(this.events);
+    });
   },
   beforeDestroy() {
-		if (this.chart && this.chart.destroy) {
-      this.chart.destroy();
+		if (this.chart) {
+      this.chart.destructor();
     }
 	}
 }

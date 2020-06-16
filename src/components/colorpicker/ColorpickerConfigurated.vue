@@ -5,7 +5,7 @@
 <script>
 import { Colorpicker as ColorpickerDHX } from "dhx-suite";
 export default {
-	name: "ChartConfigurated",
+	name: "ColorpickerConfigurated",
 	data: () => ({
     colorpicker: null
 	}),
@@ -21,11 +21,9 @@ export default {
     });
   },
   beforeDestroy() {
-		if (this.colorpicker && this.colorpicker.destroy) {
-      this.colorpicker.destroy();
+		if (this.colorpicker) {
+      this.colorpicker.destructor();
     }
 	}
 }
 </script>
-
-

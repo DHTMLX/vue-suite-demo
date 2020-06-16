@@ -1,9 +1,7 @@
 /* Vue components */
-.events-list {
+.events-list-wrapper {
   font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
   font-size: 14px;
-}
-.events-list-wrapper {
   width: 350px;
   margin-left: 20px;
   border: 1px solid #DFDFDF;
@@ -27,7 +25,7 @@
 .component-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .custom-button {
   border: none;
@@ -48,6 +46,16 @@
   margin-right: 20px;
 }
 .dhx-container {
+  font-family: Roboto;
+  background-color: rgba(0, 0, 0, .07);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dhx-container-widget {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,16 +88,6 @@
 
 /* Stories */
 
-.dhx-container {
-  font-family: Roboto;
-  background-color: rgba(0, 0, 0, .07);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-}
 .dhx-container a {
   cursor: pointer;
   text-decoration: none;
@@ -99,4 +97,37 @@
 }
 .dhx-container h3 {
   color: rgba(0, 0, 0, .7);
+}
+
+/* Dataview */
+
+.template {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0,0,0,.7);
+  cursor: pointer;
+}
+.template.template__container {
+  max-height: 125px;
+  overflow: hidden;
+  position: relative;
+}
+.template__image {
+  width: 100px;
+  height: auto;
+  float: left;
+  margin-right: 12px;
+}
+.template__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  padding-bottom: 4px;
+  padding-top: 12px;
+  min-height: 40px;
+}
+.template__description {
+  margin: 0;
 }

@@ -9,18 +9,18 @@ export default {
 	data: () => ({
     colorpicker: null
   }),
-  async mounted() {
-    await fromCDN([
+  mounted() {
+    fromCDN([
       "https://cdn.dhtmlx.com/suite/edge/suite.js",
       "https://cdn.dhtmlx.com/suite/edge/suite.css",
     ]).then(() => {
       // eslint-disable-next-line no-undef
-      this.colorPicker = new dhx.Colorpicker(this.$$refs.colorpicker, { grayShades: true });
+      this.colorPicker = new dhx.Colorpicker(this.$refs.colorpicker, { grayShades: true });
     })
   },
   beforeDestroy() {
-		if (this.colorpicker && this.colorpicker.destroy) {
-      this.colorpicker.destroy();
+		if (this.colorpicker) {
+      this.colorpicker.destructor();
     }
 	}
 }

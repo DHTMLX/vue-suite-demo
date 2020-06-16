@@ -11,8 +11,8 @@ export default {
 	data: () => ({
     chart: null
   }),
-  async mounted() {
-    await fromCDN([
+  mounted() {
+    fromCDN([
       "https://cdn.dhtmlx.com/suite/edge/suite.js",
       "https://cdn.dhtmlx.com/suite/edge/suite.css",
     ]).then(() => {
@@ -44,8 +44,8 @@ export default {
     })
   },
   beforeDestroy() {
-		if (this.chart && this.chart.destroy) {
-      this.chart.destroy();
+		if (this.chart) {
+      this.chart.destructor();
     }
 	}
 }
