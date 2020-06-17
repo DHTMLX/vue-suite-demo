@@ -1,5 +1,5 @@
 <p align="left">
-	<a href="https://dhtmlx.github.io/vue-suite-demo/?path=/story/calendar--base"><img src="src/assets/logo.png" width="150" heigh="55"></a>
+	<a href="https://dhtmlx.github.io/vue-suite-demo/?path=/story/calendar--base"><img src="https://dhtmlx.github.io/vue-suite-demo/public/logo.svg" width="150" heigh="55"></a>
 </p>
 
 
