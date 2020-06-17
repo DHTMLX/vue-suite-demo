@@ -13,7 +13,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TimepickerBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/timepicker/TimepickerBase.vue"
         target="_blank"
       >
         Source code
@@ -36,7 +36,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TimepickerConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/timepicker/TimepickerConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -52,7 +52,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TimepickerCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/timepicker/TimepickerCdn.vue"
         target="_blank"
       >
         Source code
@@ -68,7 +68,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TimepickerEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/timepicker/TimepickerEvents.vue"
         target="_blank"
       >
         Source code

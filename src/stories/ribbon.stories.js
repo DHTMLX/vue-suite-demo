@@ -14,7 +14,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/RibbonBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ribbon/RibbonBase.vue"
         target="_blank"
       >
         Source code
@@ -35,7 +35,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/RibbonConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ribbon/RibbonConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -51,7 +51,7 @@ export const data = () => ({
     <section class="dhx-container">
       <h3>Work with data</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/RibbonData.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ribbon/RibbonData.vue"
         target="_blank"
       >
         Source code
@@ -67,7 +67,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/RibbonCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ribbon/RibbonCdn.vue"
         target="_blank"
       >
         Source code
@@ -83,7 +83,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/RibbonEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ribbon/RibbonEvents.vue"
         target="_blank"
       >
         Source code

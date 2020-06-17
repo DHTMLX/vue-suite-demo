@@ -14,7 +14,7 @@ export const base = () => ({
       <h3>Basic initialization</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/CalendarBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/calendar/CalendarBase.vue"
         target="_blank"
       >
         Source code
@@ -41,7 +41,7 @@ export const configurated = () => ({
       <h3>Pre-configured component</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/CalendarConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/calendar/CalendarConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -58,7 +58,7 @@ export const CDN = () => ({
       <h3>CDN basic initialization</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/CalendarCdn.vues"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/calendar/CalendarCdn.vues"
         target="_blank"
       >
         Source code
@@ -75,7 +75,7 @@ export const events = () => ({
       <h3>Component Events</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/app/vue-suite-demo/blob/master/src/components/CalendarEvents.vue"
+        href="https://github.com/DHTMLX/app/vue-suite-demo/blob/master/src/components/calendar/CalendarEvents.vue"
         target="_blank"
       >
         Source code

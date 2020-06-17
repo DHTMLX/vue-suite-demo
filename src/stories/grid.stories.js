@@ -14,7 +14,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/GridBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/grid/GridBase.vue"
         target="_blank"
       >
         Source code
@@ -51,7 +51,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/GridConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/grid/GridConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -67,7 +67,7 @@ export const data = () => ({
     <section class="dhx-container">
       <h3>Work with data</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/GridData.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/grid/GridData.vue"
         target="_blank"
       >
         Source code
@@ -83,7 +83,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/GridCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/grid/GridCdn.vue"
         target="_blank"
       >
         Source code
@@ -99,7 +99,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/GridEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/grid/GridEvents.vue"
         target="_blank"
       >
         Source code

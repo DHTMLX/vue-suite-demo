@@ -13,7 +13,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/SliderBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/slider/SliderBase.vue"
         target="_blank"
       >
         Source code
@@ -40,7 +40,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/SliderConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/slider/SliderConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -56,7 +56,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/SliderCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/slider/SliderCdn.vue"
         target="_blank"
       >
         Source code
@@ -72,7 +72,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/SliderEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/slider/SliderEvents.vue"
         target="_blank"
       >
         Source code

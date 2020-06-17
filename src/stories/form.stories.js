@@ -14,7 +14,7 @@ export const base = () => ({
       <h3>Basic initialization</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/FormBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/form/FormBase.vue"
         target="_blank"
       >
         Source code
@@ -79,7 +79,7 @@ export const configurated = () => ({
       <h3>Pre-configured component</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/FormConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/form/FormConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -96,7 +96,7 @@ export const CDN = () => ({
       <h3>CDN basic initialization</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/FormCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/form/FormCdn.vue"
         target="_blank"
       >
         Source code
@@ -113,7 +113,7 @@ export const events = () => ({
       <h3>Component Events</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/FormEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/form/FormEvents.vue"
         target="_blank"
       >
         Source code

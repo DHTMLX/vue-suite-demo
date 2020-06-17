@@ -13,7 +13,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TabbarBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/tabbar/TabbarBase.vue"
         target="_blank"
       >
         Source code
@@ -64,7 +64,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TabbarConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/tabbar/TabbarConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -80,7 +80,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TabbarCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/tabbar/TabbarCdn.vue"
         target="_blank"
       >
         Source code
@@ -96,7 +96,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/TabbarEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/tabbar/TabbarEvents.vue"
         target="_blank"
       >
         Source code

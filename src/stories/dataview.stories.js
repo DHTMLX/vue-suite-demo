@@ -14,7 +14,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/DataviewBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/dataview/DataviewBase.vue"
         target="_blank"
       >
         Source code
@@ -50,7 +50,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/DataviewConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/dataview/DataviewConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -66,7 +66,7 @@ export const data = () => ({
     <section class="dhx-container">
       <h3>Work with data</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/DataviewData.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/dataview/DataviewData.vue"
         target="_blank"
       >
         Source code
@@ -82,7 +82,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/DataviewCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/dataview/DataviewCdn.vue"
         target="_blank"
       >
         Source code
@@ -98,7 +98,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/DataviewEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/dataview/DataviewEvents.vue"
         target="_blank"
       >
         Source code

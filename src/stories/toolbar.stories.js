@@ -14,7 +14,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ToolbarBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/toolbar/ToolbarBase.vue"
         target="_blank"
       >
         Source code
@@ -36,7 +36,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ToolbarConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/toolbar/ToolbarConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -52,7 +52,7 @@ export const data = () => ({
     <section class="dhx-container">
       <h3>Work with data</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ToolbarData.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/toolbar/ToolbarData.vue"
         target="_blank"
       >
         Source code
@@ -68,7 +68,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ToolbarCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/toolbar/ToolbarCdn.vue"
         target="_blank"
       >
         Source code
@@ -84,7 +84,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ToolbarEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/toolbar/ToolbarEvents.vue"
         target="_blank"
       >
         Source code

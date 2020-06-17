@@ -13,7 +13,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ColorpickerBase.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/colorpicker/ColorpickerBase.vue"
         target="_blank"
       >
         Source code
@@ -37,7 +37,7 @@ export const configurated = () => ({
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ColorpickerConfigurated.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/colorpicker/ColorpickerConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -53,7 +53,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ColorpickerCdn.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/colorpicker/ColorpickerCdn.vue"
         target="_blank"
       >
         Source code
@@ -69,7 +69,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ColorpickerEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/colorpicker/ColorpickerEvents.vue"
         target="_blank"
       >
         Source code
