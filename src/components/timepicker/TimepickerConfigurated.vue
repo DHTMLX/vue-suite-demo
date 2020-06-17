@@ -1,29 +1,29 @@
 <template>
-	<div ref="timepicker"></div>
+  <div ref="timepicker"></div>
 </template>
 
 <script>
 import { Timepicker as TimepickerDHX } from "dhx-suite";
 export default {
-	name: "TimepickerConfigurated",
-	data: () => ({
-    timepicker: null
-	}),
-	props: {
-		options: {
-			type: Object,
-			required: true
-		}
-	},
+  name: "TimepickerConfigurated",
+  data: () => ({
+    timepicker: null,
+  }),
+  props: {
+    options: {
+      type: Object,
+      required: true,
+    },
+  },
   mounted() {
     this.timepicker = new TimepickerDHX(this.$refs.timepicker, {
-      ...this.options
+      ...this.options,
     });
   },
   beforeDestroy() {
-		if (this.timepicker) {
+    if (this.timepicker) {
       this.timepicker.destructor();
     }
-	}
-}
+  },
+};
 </script>

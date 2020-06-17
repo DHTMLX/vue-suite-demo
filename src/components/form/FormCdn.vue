@@ -1,22 +1,19 @@
 <template>
-	<div ref="form"></div>
+  <div ref="form"></div>
 </template>
 
 <script>
 import fromCDN from "from-cdn";
 export default {
-	name: "FormCdn",
-	data: () => ({
-    form: null
+  name: "FormCdn",
+  data: () => ({
+    form: null,
   }),
   mounted() {
-    fromCDN([
-      "https://cdn.dhtmlx.com/suite/edge/suite.js",
-      "https://cdn.dhtmlx.com/suite/edge/suite.css",
-    ]).then(() => {
+    fromCDN(["https://cdn.dhtmlx.com/suite/edge/suite.js", "https://cdn.dhtmlx.com/suite/edge/suite.css"]).then(() => {
       // eslint-disable-next-line no-undef
       this.chart = new dhx.Form(this.$refs.form, {
-        css: 'dhx_widget--bordered dhx_widget--bg_white',
+        css: "dhx_widget--bordered dhx_widget--bg_white",
         gravity: false,
         width: 400,
         rows: [
@@ -54,12 +51,12 @@ export default {
           },
         ],
       });
-    })
+    });
   },
   beforeDestroy() {
-		if (this.form) {
+    if (this.form) {
       this.form.destructor();
     }
-	}
-}
+  },
+};
 </script>

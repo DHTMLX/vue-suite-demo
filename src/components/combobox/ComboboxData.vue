@@ -1,37 +1,39 @@
 <template>
   <section class="dhx-container-widget">
     <div class="dhx-container--button">
-      <button @click="handleClick()" class="custom-button">Select first item</button>
+      <button @click="handleClick()" class="custom-button">
+        Select first item
+      </button>
     </div>
-    <div ref="combobox" style="width:400px"></div>
+    <div ref="combobox" style="width: 400px;"></div>
   </section>
 </template>
 
 <script>
-import {Combobox as ComboboxDHX, DataCollection} from "dhx-suite";
+import { Combobox as ComboboxDHX, DataCollection } from "dhx-suite";
 export default {
   name: "ComboboxData",
   data: () => ({
     data: new DataCollection(),
-    combobox: null
+    combobox: null,
   }),
   methods: {
     handleClick() {
-      this.data.map(() => this.data.update(this.data.getId(0), {$selected: true}));
-    }
+      this.data.map(() => this.data.update(this.data.getId(0), { $selected: true }));
+    },
   },
   mounted() {
     this.combobox = new ComboboxDHX(this.$refs.combobox, {
       placeholder: "Click to choose",
-      data: this.data
+      data: this.data,
     });
 
     this.data.load("https://dhtmlx.github.io/react-widgets/static/combobox.json");
   },
   beforeDestroy() {
-		if (this.combobox) {
+    if (this.combobox) {
       this.combobox.destructor();
     }
-	}
-}
+  },
+};
 </script>

@@ -3,27 +3,27 @@
 </template>
 
 <script>
-import { Calendar as CalendarDHX } from 'dhx-suite';
+import { Calendar as CalendarDHX } from "dhx-suite";
 export default {
   name: "CalendarConfigurated",
   data: () => ({
     calendar: null,
   }),
   props: {
-		options: {
-			type: Object,
-			required: true
-		}
-	},
+    options: {
+      type: Object,
+      required: true,
+    },
+  },
   mounted() {
     this.calendar = new CalendarDHX(this.$refs.calendar, {
-      ...this.options
+      ...this.options,
     });
   },
   beforeDestroy() {
-		if (this.calendar) {
+    if (this.calendar) {
       this.calendar.destructor();
     }
-	}
-}
+  },
+};
 </script>

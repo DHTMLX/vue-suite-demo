@@ -1,11 +1,11 @@
-import RibbonBase from '../components/ribbon/RibbonBase';
-import RibbonConfigurated from '../components/ribbon/RibbonConfigurated';
-import RibbonData from '../components/ribbon/RibbonData';
-import RibbonCdn from '../components/ribbon/RibbonCdn';
-import RibbonEvents from '../components/ribbon/RibbonEvents';
+import RibbonBase from "../components/ribbon/RibbonBase";
+import RibbonConfigurated from "../components/ribbon/RibbonConfigurated";
+import RibbonData from "../components/ribbon/RibbonData";
+import RibbonCdn from "../components/ribbon/RibbonCdn";
+import RibbonEvents from "../components/ribbon/RibbonEvents";
 
 export default {
-    title: "Ribbon",
+  title: "Ribbon",
 };
 
 export const base = () => ({
@@ -28,8 +28,8 @@ export const configurated = () => ({
   components: { RibbonConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-    }
+      css: "dhx_widget--bordered dhx_widget--bg_white",
+    },
   }),
   template: `
     <section class="dhx-container">

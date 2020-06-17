@@ -1,11 +1,11 @@
-import MenuBase from '../components/menu/MenuBase';
-import MenuConfigurated from '../components/menu/MenuConfigurated';
-import MenuData from '../components/menu/MenuData';
-import MenuCdn from '../components/menu/MenuCdn';
-import MenuEvents from '../components/menu/MenuEvents';
+import MenuBase from "../components/menu/MenuBase";
+import MenuConfigurated from "../components/menu/MenuConfigurated";
+import MenuData from "../components/menu/MenuData";
+import MenuCdn from "../components/menu/MenuCdn";
+import MenuEvents from "../components/menu/MenuEvents";
 
 export default {
-    title: "Menu",
+  title: "Menu",
 };
 
 export const base = () => ({
@@ -28,8 +28,8 @@ export const configurated = () => ({
   components: { MenuConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-    }
+      css: "dhx_widget--bordered dhx_widget--bg_white",
+    },
   }),
   template: `
     <section class="dhx-container">

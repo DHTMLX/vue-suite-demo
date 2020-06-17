@@ -1,8 +1,10 @@
 <template>
   <section>
     <div class="dhx-container--button">
-      <button @click="handleAddClick()" class="custom-button">Add notification</button>
-      <button @click="handleResetClick()" class="custom-button">Reset {{count}} notifications</button>
+      <button @click="handleAddClick()" class="custom-button">
+        Add notification
+      </button>
+      <button @click="handleResetClick()" class="custom-button">Reset {{ count }} notifications</button>
     </div>
     <div ref="toolbar" class="dhx-container--menu"></div>
   </section>
@@ -14,19 +16,19 @@ export default {
   name: "ToolbarData",
   data: () => ({
     data: new TreeCollection(),
-    toolbar : null,
-    count: 0
+    toolbar: null,
+    count: 0,
   }),
   methods: {
     handleAddClick() {
-    this.data.update("add", {count: this.data.getItem("add").count + 1});
-  },
+      this.data.update("add", { count: this.data.getItem("add").count + 1 });
+    },
     handleResetClick() {
-      this.data.update("add", {count: 0});
-    }
+      this.data.update("add", { count: 0 });
+    },
   },
   mounted() {
-    this.toolbar  = new ToolbarDHX(this.$refs.toolbar , {
+    this.toolbar = new ToolbarDHX(this.$refs.toolbar, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
       navigationType: "pointer",
       data: this.data,
@@ -39,9 +41,9 @@ export default {
     });
   },
   beforeDestroy() {
-		if (this.toolbar) {
+    if (this.toolbar) {
       this.toolbar.destructor();
     }
-	}
-}
+  },
+};
 </script>

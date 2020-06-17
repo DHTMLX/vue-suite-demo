@@ -1,10 +1,10 @@
-import FormBase from '../components/form/FormBase';
-import FormConfigurated from '../components/form/FormConfigurated';
-import FormCdn from '../components/form/FormCdn';
-import FormEvents from '../components/form/FormEvents';
+import FormBase from "../components/form/FormBase";
+import FormConfigurated from "../components/form/FormConfigurated";
+import FormCdn from "../components/form/FormCdn";
+import FormEvents from "../components/form/FormEvents";
 
 export default {
-    title: 'Form',
+  title: "Form",
 };
 
 export const base = () => ({
@@ -28,51 +28,51 @@ export const configurated = () => ({
   components: { FormConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
+      css: "dhx_widget--bordered dhx_widget--bg_white",
       gravity: false,
       padding: 20,
-      title: 'DHX Form',
+      title: "DHX Form",
       width: 400,
       rows: [
-				{
-					type: "datepicker",
-					label: "Date",
-					required: true,
-					id: "date",
-					name: "date"
-				},
-				{
-					type: "timepicker",
-					controls: "true",
-					label: "Time",
-					required: true,
-					id: "time",
-					name: "time"
-				},
-				{
-					type: "colorpicker",
-					label: "Color",
-					required: true,
-					id: "color",
-					name: "color"
-				},
-				{
-					type: "simpleVault",
-					required: true,
-					label: "Files",
-					id: "simplevault",
-					name: "simplevault"
-				},
-				{
-					type: "button",
-					value: "Send",
-					size: "medium",
-					view: "flat",
-					submit: true,
-					color: "primary"
-				}
-			]
-    }
+        {
+          type: "datepicker",
+          label: "Date",
+          required: true,
+          id: "date",
+          name: "date",
+        },
+        {
+          type: "timepicker",
+          controls: "true",
+          label: "Time",
+          required: true,
+          id: "time",
+          name: "time",
+        },
+        {
+          type: "colorpicker",
+          label: "Color",
+          required: true,
+          id: "color",
+          name: "color",
+        },
+        {
+          type: "simpleVault",
+          required: true,
+          label: "Files",
+          id: "simplevault",
+          name: "simplevault",
+        },
+        {
+          type: "button",
+          value: "Send",
+          size: "medium",
+          view: "flat",
+          submit: true,
+          color: "primary",
+        },
+      ],
+    },
   }),
   template: `
     <section class="dhx-container">

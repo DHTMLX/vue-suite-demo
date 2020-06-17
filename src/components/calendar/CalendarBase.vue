@@ -7,7 +7,7 @@ import { Calendar as CalendarDHX } from "dhx-suite";
 export default {
   name: "CalendarBase",
   data: () => ({
-    calendar: null
+    calendar: null,
   }),
   mounted() {
     this.calendar = new CalendarDHX(this.$refs.calendar, {
@@ -16,9 +16,9 @@ export default {
     });
   },
   beforeDestroy() {
-		if (this.calendar) {
+    if (this.calendar) {
       this.calendar.destructor();
     }
-	}
-}
+  },
+};
 </script>

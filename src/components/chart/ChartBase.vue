@@ -1,7 +1,7 @@
 <template>
-  <section style="width: 600px">
-		<div ref="chart"></div>
-	</section>
+  <section style="width: 600px;">
+    <div ref="chart"></div>
+  </section>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ import { Chart as ChartDHX } from "dhx-suite";
 export default {
   name: "ChartBase",
   data: () => ({
-    chart: null
+    chart: null,
   }),
   mounted() {
     this.chart = new ChartDHX(this.$refs.chart, {
@@ -39,9 +39,9 @@ export default {
     this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
   },
   beforeDestroy() {
-		if (this.chart) {
+    if (this.chart) {
       this.chart.destructor();
     }
-	}
-}
+  },
+};
 </script>

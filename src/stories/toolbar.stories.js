@@ -1,11 +1,11 @@
-import ToolbarBase from '../components/toolbar/ToolbarBase';
-import ToolbarConfigurated from '../components/toolbar/ToolbarConfigurated';
-import ToolbarData from '../components/toolbar/ToolbarData';
-import ToolbarCdn from '../components/toolbar/ToolbarCdn';
-import ToolbarEvents from '../components/toolbar/ToolbarEvents';
+import ToolbarBase from "../components/toolbar/ToolbarBase";
+import ToolbarConfigurated from "../components/toolbar/ToolbarConfigurated";
+import ToolbarData from "../components/toolbar/ToolbarData";
+import ToolbarCdn from "../components/toolbar/ToolbarCdn";
+import ToolbarEvents from "../components/toolbar/ToolbarEvents";
 
 export default {
-    title: "Toolbar",
+  title: "Toolbar",
 };
 
 export const base = () => ({
@@ -28,9 +28,9 @@ export const configurated = () => ({
   components: { ToolbarConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-      navigationType: 'pointer',
-    }
+      css: "dhx_widget--bordered dhx_widget--bg_white",
+      navigationType: "pointer",
+    },
   }),
   template: `
     <section class="dhx-container">

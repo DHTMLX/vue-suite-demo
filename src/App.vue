@@ -4,11 +4,11 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
 
 <style>
-@import './index.css';
+@import "./index.css";
 @import "@mdi/font/css/materialdesignicons.min.css";
 </style>

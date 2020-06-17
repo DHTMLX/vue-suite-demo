@@ -1,10 +1,10 @@
-import WindowBase from '../components/window/WindowBase';
-import WindowConfigurated from '../components/window/WindowConfigurated';
-import WindowCdn from '../components/window/WindowCdn';
-import WindowEvents from '../components/window/WindowEvents';
+import WindowBase from "../components/window/WindowBase";
+import WindowConfigurated from "../components/window/WindowConfigurated";
+import WindowCdn from "../components/window/WindowCdn";
+import WindowEvents from "../components/window/WindowEvents";
 
 export default {
-    title: "Window",
+  title: "Window",
 };
 
 export const base = () => ({
@@ -29,11 +29,11 @@ export const configurated = () => ({
     options: {
       width: 440,
       height: 520,
-      title: 'Window',
+      title: "Window",
       html: `<p>Here is a neat and flexible JavaScript window system with a fast and simple initialization.</p><p>Inspect all the DHTMLX window samples to discover each and every feature.</p><img style='display: block; width: 200px; height: 200px; margin-top: 20px; margin-left: auto; margin-right: auto' src='https://dhtmlx.github.io/react-widgets/static/developer.svg'>`,
       closable: true,
-      modal: true
-    }
+      modal: true,
+    },
   }),
   template: `
     <section class="dhx-container">

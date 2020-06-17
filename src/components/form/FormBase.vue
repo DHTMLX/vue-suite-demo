@@ -1,5 +1,5 @@
 <template>
-	<div ref="form"></div>
+  <div ref="form"></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ import { Form as FormDHX } from "dhx-suite";
 export default {
   name: "FormBase",
   data: () => ({
-    form: null
+    form: null,
   }),
   mounted() {
     this.form = new FormDHX(this.$refs.form, {
@@ -51,9 +51,9 @@ export default {
     });
   },
   beforeDestroy() {
-		if (this.form) {
+    if (this.form) {
       this.form.destructor();
     }
-	}
-}
+  },
+};
 </script>

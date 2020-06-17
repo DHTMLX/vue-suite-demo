@@ -1,8 +1,10 @@
 <template>
   <section class="dhx-container-widget">
     <div class="dhx-container--button">
-      <button @click="handleAddClick()" class="custom-button">Add notification</button>
-      <button @click="handleResetClick()" class="custom-button">Reset {{count}} notifications</button>
+      <button @click="handleAddClick()" class="custom-button">
+        Add notification
+      </button>
+      <button @click="handleResetClick()" class="custom-button">Reset {{ count }} notifications</button>
     </div>
     <div ref="sidebar"></div>
   </section>
@@ -15,15 +17,17 @@ export default {
   data: () => ({
     data: new TreeCollection(),
     sidebar: null,
-    count: 0
+    count: 0,
   }),
   methods: {
     handleAddClick() {
-      this.data.update("media", {count: this.data.getItem("media").count + 1});
+      this.data.update("media", {
+        count: this.data.getItem("media").count + 1,
+      });
     },
     handleResetClick() {
-      this.data.update("media", {count: 0});
-    }
+      this.data.update("media", { count: 0 });
+    },
   },
   mounted() {
     this.sidebar = new SidebarDHX(this.$refs.sidebar, {
@@ -38,9 +42,9 @@ export default {
     });
   },
   beforeDestroy() {
-		if (this.sidebar) {
+    if (this.sidebar) {
       this.sidebar.destructor();
     }
-	}
-}
+  },
+};
 </script>

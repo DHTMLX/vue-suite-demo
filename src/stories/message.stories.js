@@ -1,8 +1,8 @@
-import MessageBase from '../components/message/MessageBase';
-import MessageCdn from '../components/message/MessageCdn';
+import MessageBase from "../components/message/MessageBase";
+import MessageCdn from "../components/message/MessageCdn";
 
 export default {
-    title: "Message",
+  title: "Message",
 };
 
 export const base = () => ({

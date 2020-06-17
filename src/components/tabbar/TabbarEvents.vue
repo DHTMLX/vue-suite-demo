@@ -2,10 +2,12 @@
   <div class="component-wrapper">
     <div ref="tabbar" class="dhx-container--tabbar"></div>
     <div class="events-list events-list-wrapper">
-      <div class="events-list--element" v-if="events.length === 0">No events yet</div>
+      <div class="events-list--element" v-if="events.length === 0">
+        No events yet
+      </div>
       <div class="events-list--element" v-else v-for="event in events" :key="event.keyId">
-        <p>{{event.name}}</p>
-        <p>{{event.value}}</p>
+        <p>{{ event.name }}</p>
+        <p>{{ event.value }}</p>
       </div>
     </div>
   </div>
@@ -17,7 +19,7 @@ export default {
   name: "TabbarEvents",
   data: () => ({
     events: [],
-    tabbar: null
+    tabbar: null,
   }),
   mounted() {
     this.tabbar = new TabbarDHX(this.$refs.tabbar, {
@@ -35,7 +37,7 @@ export default {
           id: "Paris",
           tab: "Paris",
           html:
-            "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Paris (French pronunciation: ​[paʁi]</strong> is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe\'s major centres of finance, diplomacy, commerce, fashion, science, as well as the arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which has an estimated official 2019 population of 12,213,364, or about 18 percent of the population of France.</p></div>",
+            "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Paris (French pronunciation: ​[paʁi]</strong> is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe's major centres of finance, diplomacy, commerce, fashion, science, as well as the arts. The City of Paris is the centre and seat of government of the Île-de-France, or Paris Region, which has an estimated official 2019 population of 12,213,364, or about 18 percent of the population of France.</p></div>",
         },
         {
           id: "London",
@@ -49,27 +51,27 @@ export default {
           html:
             "<div><p style='font-size: 18px; line-height: 1.6; padding-left: 20px; padding-right: 20px'><strong>Rome (Latin and Italian: Roma [ˈroːma]</strong> is the capital city and a special comune of Italy (named Comune di Roma Capitale). Rome also serves as the capital of the Lazio region. With 2,872,800 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. It is the fourth most populous city in the European Union by population within city limits. It is the centre of the Metropolitan City of Rome, which has a population of 4,355,725 residents, thus making it the most populous metropolitan city in Italy.</p></div>",
         },
-      ]
+      ],
     });
 
     this.tabbar.events.on("change", (activeId, prevId) => {
-      const info = {activeId, prevId};
+      const info = { activeId, prevId };
       const keyId = Math.random();
-      this.events = [ { keyId, name: "change", value: JSON.stringify(info) } ].concat(this.events);
+      this.events = [{ keyId, name: "change", value: JSON.stringify(info) }].concat(this.events);
     });
-    this.tabbar.events.on("afterClose", (id) => {
+    this.tabbar.events.on("afterClose", id => {
       const keyId = Math.random();
-      this.events = [ { keyId, name: "afterClose", value: id } ].concat(this.events);
+      this.events = [{ keyId, name: "afterClose", value: id }].concat(this.events);
     });
-    this.tabbar.events.on("beforeClose", (id) => {
+    this.tabbar.events.on("beforeClose", id => {
       const keyId = Math.random();
-      this.events = [ { keyId, name: "beforeClose", value: id } ].concat(this.events);
+      this.events = [{ keyId, name: "beforeClose", value: id }].concat(this.events);
     });
   },
   beforeDestroy() {
-		if (this.tabbar) {
+    if (this.tabbar) {
       this.tabbar.destructor();
     }
-	}
-}
+  },
+};
 </script>

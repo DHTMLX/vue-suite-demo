@@ -1,11 +1,11 @@
-import SidebarBase from '../components/sidebar/SidebarBase';
-import SidebarConfigurated from '../components/sidebar/SidebarConfigurated';
-import SidebarData from '../components/sidebar/SidebarData';
-import SidebarCdn from '../components/sidebar/SidebarCdn';
-import SidebarEvents from '../components/sidebar/SidebarEvents';
+import SidebarBase from "../components/sidebar/SidebarBase";
+import SidebarConfigurated from "../components/sidebar/SidebarConfigurated";
+import SidebarData from "../components/sidebar/SidebarData";
+import SidebarCdn from "../components/sidebar/SidebarCdn";
+import SidebarEvents from "../components/sidebar/SidebarEvents";
 
 export default {
-    title: "Sidebar",
+  title: "Sidebar",
 };
 
 export const base = () => ({
@@ -32,7 +32,7 @@ export const configurated = () => ({
       width: 200,
       minWidth: 120,
       collapsed: false,
-    }
+    },
   }),
   template: `
     <section class="dhx-container">

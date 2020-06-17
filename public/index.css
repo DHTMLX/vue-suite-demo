@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 * {
   box-sizing: border-box;
@@ -19,8 +19,8 @@
 }
 
 #btn-docs:hover {
-  background-color: rgba(0, 0, 0, .07);
-  transition: background-color .2s ease-out;
+  background-color: rgba(0, 0, 0, 0.07);
+  transition: background-color 0.2s ease-out;
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
@@ -45,8 +45,8 @@
 }
 
 #btn-trial:hover {
-  background-color: rgba(2, 136, 209, .8);
-  transition: background-color .2s ease-out;
+  background-color: rgba(2, 136, 209, 0.8);
+  transition: background-color 0.2s ease-out;
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
@@ -59,6 +59,8 @@
   align-items: center !important;
 }
 
-.css-pvky73, .css-11sh1n2, .css-c3junj {
+.css-pvky73,
+.css-11sh1n2,
+.css-c3junj {
   display: none !important;
 }

@@ -1,11 +1,13 @@
 <template>
   <div class="component-wrapper">
-    <div ref="slider" style="width:400px"></div>
+    <div ref="slider" style="width: 400px;"></div>
     <div class="events-list events-list-wrapper">
-      <div class="events-list--element" v-if="events.length === 0">No events yet</div>
+      <div class="events-list--element" v-if="events.length === 0">
+        No events yet
+      </div>
       <div class="events-list--element" v-else v-for="event in events" :key="event.keyId">
-        <p>{{event.name}}</p>
-        <p>{{event.value}}</p>
+        <p>{{ event.name }}</p>
+        <p>{{ event.value }}</p>
       </div>
     </div>
   </div>
@@ -17,7 +19,7 @@ export default {
   name: "SliderEvents",
   data: () => ({
     events: [],
-    slider: null
+    slider: null,
   }),
   mounted() {
     this.slider = new SliderDHX(this.$refs.slider, {
@@ -27,26 +29,26 @@ export default {
       tooltip: true,
       tick: 1,
       majorTick: 10,
-      tickTemplate: (v) => v,
+      tickTemplate: v => v,
     });
 
-    this.slider.events.on("change", (id) => {
+    this.slider.events.on("change", id => {
       const keyId = Math.random();
-      this.events = [ { keyId, name: "change", value: id } ].concat(this.events);
+      this.events = [{ keyId, name: "change", value: id }].concat(this.events);
     });
-    this.slider.events.on("mousedown", (id) => {
+    this.slider.events.on("mousedown", id => {
       const keyId = Math.random();
-      this.events = [ { keyId, name: "mousedown", value: id } ].concat(this.events);
+      this.events = [{ keyId, name: "mousedown", value: id }].concat(this.events);
     });
-    this.slider.events.on("mouseup", (id) => {
+    this.slider.events.on("mouseup", id => {
       const keyId = Math.random();
-      this.events = [ { keyId, name: "mouseup", value: id } ].concat(this.events);
+      this.events = [{ keyId, name: "mouseup", value: id }].concat(this.events);
     });
   },
   beforeDestroy() {
-		if (this.slider) {
+    if (this.slider) {
       this.slider.destructor();
     }
-	}
-}
+  },
+};
 </script>

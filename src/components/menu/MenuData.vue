@@ -1,7 +1,9 @@
 <template>
   <section>
     <div class="dhx-container--button">
-      <button @click="handleClick()" class="custom-button">disable/enable edit button</button>
+      <button @click="handleClick()" class="custom-button">
+        disable/enable edit button
+      </button>
     </div>
     <div ref="menu" class="dhx-container--menu"></div>
   </section>
@@ -14,26 +16,28 @@ export default {
   data: () => ({
     data: new TreeCollection(),
     disabled: false,
-    menu: null
+    menu: null,
   }),
   methods: {
     handleClick() {
-      this.data.update("edit", {disabled: !this.data.getItem("edit").disabled});
+      this.data.update("edit", {
+        disabled: !this.data.getItem("edit").disabled,
+      });
       //console.log(this.data.getItem("edit"));
-    }
+    },
   },
   mounted() {
     this.menu = new MenuDHX(this.$refs.menu, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
-      data: this.data
+      data: this.data,
     });
 
     this.data.load("https://dhtmlx.github.io/react-widgets/static/menu.json");
   },
   beforeDestroy() {
-		if (this.menu) {
+    if (this.menu) {
       this.menu.destructor();
     }
-	}
-}
+  },
+};
 </script>

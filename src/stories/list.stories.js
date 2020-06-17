@@ -1,11 +1,11 @@
-import ListBase from '../components/list/ListBase';
-import ListConfigurated from '../components/list/ListConfigurated';
-import ListData from '../components/list/ListData';
-import ListCdn from '../components/list/ListCdn';
-import ListEvents from '../components/list/ListEvents';
+import ListBase from "../components/list/ListBase";
+import ListConfigurated from "../components/list/ListConfigurated";
+import ListData from "../components/list/ListData";
+import ListCdn from "../components/list/ListCdn";
+import ListEvents from "../components/list/ListEvents";
 
 export default {
-    title: "List",
+  title: "List",
 };
 
 export const base = () => ({
@@ -28,13 +28,13 @@ export const configurated = () => ({
   components: { ListConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered dhx_widget--bg_white',
-      template: (item) => `<span><strong>${item.title}</strong> ${item.short}</span>`,
+      css: "dhx_widget--bordered dhx_widget--bg_white",
+      template: item => `<span><strong>${item.title}</strong> ${item.short}</span>`,
       height: 400,
       itemHeight: 70,
       keyNavigation: true,
-      dragMode: "both"
-    }
+      dragMode: "both",
+    },
   }),
   template: `
     <section class="dhx-container">

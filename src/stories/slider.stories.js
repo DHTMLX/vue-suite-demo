@@ -1,10 +1,10 @@
-import SliderBase from '../components/slider/SliderBase';
-import SliderConfigurated from '../components/slider/SliderConfigurated';
-import SliderCdn from '../components/slider/SliderCdn';
-import SliderEvents from '../components/slider/SliderEvents';
+import SliderBase from "../components/slider/SliderBase";
+import SliderConfigurated from "../components/slider/SliderConfigurated";
+import SliderCdn from "../components/slider/SliderCdn";
+import SliderEvents from "../components/slider/SliderEvents";
 
 export default {
-    title: "Slider",
+  title: "Slider",
 };
 
 export const base = () => ({
@@ -33,8 +33,8 @@ export const configurated = () => ({
       tooltip: true,
       tick: 1,
       majorTick: 10,
-      tickTemplate: (v) => v,
-    }
+      tickTemplate: v => v,
+    },
   }),
   template: `
     <section class="dhx-container">

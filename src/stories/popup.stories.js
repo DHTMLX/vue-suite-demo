@@ -1,9 +1,9 @@
-import PopupBase from '../components/popup/PopupBase';
-import PopupCdn from '../components/popup/PopupCdn';
-import PopupEvents from '../components/popup/PopupEvents';
+import PopupBase from "../components/popup/PopupBase";
+import PopupCdn from "../components/popup/PopupCdn";
+import PopupEvents from "../components/popup/PopupEvents";
 
 export default {
-    title: "Popup",
+  title: "Popup",
 };
 
 export const base = () => ({

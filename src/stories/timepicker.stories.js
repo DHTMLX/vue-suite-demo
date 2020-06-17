@@ -1,10 +1,10 @@
-import TimepickerBase from '../components/timepicker/TimepickerBase';
-import TimepickerConfigurated from '../components/timepicker/TimepickerConfigurated';
-import TimepickerCdn from '../components/timepicker/TimepickerCdn';
-import TimepickerEvents from '../components/timepicker/TimepickerEvents';
+import TimepickerBase from "../components/timepicker/TimepickerBase";
+import TimepickerConfigurated from "../components/timepicker/TimepickerConfigurated";
+import TimepickerCdn from "../components/timepicker/TimepickerCdn";
+import TimepickerEvents from "../components/timepicker/TimepickerEvents";
 
 export default {
-    title: "Timepicker",
+  title: "Timepicker",
 };
 
 export const base = () => ({
@@ -27,10 +27,10 @@ export const configurated = () => ({
   components: { TimepickerConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       controls: true,
-      timeFormat: 12
-    }
+      timeFormat: 12,
+    },
   }),
   template: `
     <section class="dhx-container">

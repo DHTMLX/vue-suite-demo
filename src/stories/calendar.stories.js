@@ -1,10 +1,10 @@
-import CalendarBase from '../components/calendar/CalendarBase';
-import CalendarConfigurated from '../components/calendar/CalendarConfigurated';
-import CalendarCdn from '../components/calendar/CalendarCdn';
-import CalendarEvents from '../components/calendar/CalendarEvents';
+import CalendarBase from "../components/calendar/CalendarBase";
+import CalendarConfigurated from "../components/calendar/CalendarConfigurated";
+import CalendarCdn from "../components/calendar/CalendarCdn";
+import CalendarEvents from "../components/calendar/CalendarEvents";
 
 export default {
-    title: 'Calendar',
+  title: "Calendar",
 };
 
 export const base = () => ({
@@ -28,13 +28,13 @@ export const configurated = () => ({
   components: { CalendarConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       value: new Date(),
       weekNumbers: true,
       timePicker: true,
       timeFormat: 12,
       thisMonthOnly: true,
-    }
+    },
   }),
   template: `
     <section class="dhx-container">

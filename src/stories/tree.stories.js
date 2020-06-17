@@ -1,11 +1,11 @@
-import TreeBase from '../components/tree/TreeBase';
-import TreeConfigurated from '../components/tree/TreeConfigurated';
-import TreeData from '../components/tree/TreeData';
-import TreeCdn from '../components/tree/TreeCdn';
-import TreeEvents from '../components/tree/TreeEvents';
+import TreeBase from "../components/tree/TreeBase";
+import TreeConfigurated from "../components/tree/TreeConfigurated";
+import TreeData from "../components/tree/TreeData";
+import TreeCdn from "../components/tree/TreeCdn";
+import TreeEvents from "../components/tree/TreeEvents";
 
 export default {
-    title: "Tree",
+  title: "Tree",
 };
 
 export const base = () => ({
@@ -30,7 +30,7 @@ export const configurated = () => ({
     options: {
       keyNavigation: true,
       checkbox: true,
-    }
+    },
   }),
   template: `
     <section class="dhx-container">

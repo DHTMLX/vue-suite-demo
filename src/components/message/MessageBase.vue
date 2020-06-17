@@ -1,13 +1,19 @@
 <template>
   <div class="dhx-container--button">
-    <button className="button" @click="showAlert()" class="custom-button">Show Alert</button>
-    <button className="button" @click="showConfirm()" class="custom-button">Show Confirm</button>
-    <button className="button" @click="showMessage()" class="custom-button">Show Message</button>
+    <button className="button" @click="showAlert()" class="custom-button">
+      Show Alert
+    </button>
+    <button className="button" @click="showConfirm()" class="custom-button">
+      Show Confirm
+    </button>
+    <button className="button" @click="showMessage()" class="custom-button">
+      Show Message
+    </button>
   </div>
 </template>
 
 <script>
-import {alert as dhxAlert, confirm as dhxConfirm, message as dhxMessage} from 'dhx-suite';
+import { alert as dhxAlert, confirm as dhxConfirm, message as dhxMessage } from "dhx-suite";
 export default {
   name: "MessageBase",
   methods: {
@@ -36,5 +42,5 @@ export default {
       });
     },
   },
-}
+};
 </script>

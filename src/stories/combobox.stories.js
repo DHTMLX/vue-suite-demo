@@ -1,11 +1,11 @@
-import ComboboxBase from '../components/combobox/ComboboxBase';
-import ComboboxConfigurated from '../components/combobox/ComboboxConfigurated';
-import ComboboxData from '../components/combobox/ComboboxData';
-import ComboboxCdn from '../components/combobox/ComboboxCdn';
-import ComboboxEvents from '../components/combobox/ComboboxEvents';
+import ComboboxBase from "../components/combobox/ComboboxBase";
+import ComboboxConfigurated from "../components/combobox/ComboboxConfigurated";
+import ComboboxData from "../components/combobox/ComboboxData";
+import ComboboxCdn from "../components/combobox/ComboboxCdn";
+import ComboboxEvents from "../components/combobox/ComboboxEvents";
 
 export default {
-    title: 'Combobox',
+  title: "Combobox",
 };
 
 export const base = () => ({
@@ -29,14 +29,14 @@ export const configurated = () => ({
   data: () => ({
     options: {
       multiselection: true,
-      label: 'DHX-angular combobox',
-      labelPosition: 'top',
+      label: "DHX-angular combobox",
+      labelPosition: "top",
       labelWidth: 150,
       selectAllButton: true,
       required: true,
       itemsCount: true,
-      placeholder: 'Click to choose',
-    }
+      placeholder: "Click to choose",
+    },
   }),
   template: `
     <section class="dhx-container">

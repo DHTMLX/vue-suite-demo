@@ -1,10 +1,10 @@
-import ColorpickerBase from '../components/colorpicker/ColorpickerBase';
-import ColorpickerConfigurated from '../components/colorpicker/ColorpickerConfigurated';
-import ColorpickerCdn from '../components/colorpicker/ColorpickerCdn';
-import ColorpickerEvents from '../components/colorpicker/ColorpickerEvents';
+import ColorpickerBase from "../components/colorpicker/ColorpickerBase";
+import ColorpickerConfigurated from "../components/colorpicker/ColorpickerConfigurated";
+import ColorpickerCdn from "../components/colorpicker/ColorpickerCdn";
+import ColorpickerEvents from "../components/colorpicker/ColorpickerEvents";
 
 export default {
-    title: 'Colorpicker',
+  title: "Colorpicker",
 };
 
 export const base = () => ({
@@ -27,11 +27,11 @@ export const configurated = () => ({
   components: { ColorpickerConfigurated },
   data: () => ({
     options: {
-      css: 'dhx_widget--bordered',
+      css: "dhx_widget--bordered",
       paletteOnly: true,
       grayShades: true,
-      pickerOnly: true
-    }
+      pickerOnly: true,
+    },
   }),
   template: `
     <section class="dhx-container">

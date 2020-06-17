@@ -1,27 +1,26 @@
 <template>
-	<div ref="colorpicker"></div>
+  <div ref="colorpicker"></div>
 </template>
 
 <script>
 import fromCDN from "from-cdn";
 export default {
-	name: "ColorpickerCdn",
-	data: () => ({
-    colorpicker: null
+  name: "ColorpickerCdn",
+  data: () => ({
+    colorpicker: null,
   }),
   mounted() {
-    fromCDN([
-      "https://cdn.dhtmlx.com/suite/edge/suite.js",
-      "https://cdn.dhtmlx.com/suite/edge/suite.css",
-    ]).then(() => {
+    fromCDN(["https://cdn.dhtmlx.com/suite/edge/suite.js", "https://cdn.dhtmlx.com/suite/edge/suite.css"]).then(() => {
       // eslint-disable-next-line no-undef
-      this.colorPicker = new dhx.Colorpicker(this.$refs.colorpicker, { grayShades: true });
-    })
+      this.colorPicker = new dhx.Colorpicker(this.$refs.colorpicker, {
+        grayShades: true,
+      });
+    });
   },
   beforeDestroy() {
-		if (this.colorpicker) {
+    if (this.colorpicker) {
       this.colorpicker.destructor();
     }
-	}
-}
+  },
+};
 </script>

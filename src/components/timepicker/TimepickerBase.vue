@@ -1,5 +1,5 @@
 <template>
-	<div ref="timepicker"></div>
+  <div ref="timepicker"></div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ import { Timepicker as TimepickerDHX } from "dhx-suite";
 export default {
   name: "TimepickerBase",
   data: () => ({
-    timepicker: null
+    timepicker: null,
   }),
   mounted() {
     this.timepicker = new TimepickerDHX(this.$refs.timepicker, {
@@ -15,9 +15,9 @@ export default {
     });
   },
   beforeDestroy() {
-		if (this.timepicker) {
+    if (this.timepicker) {
       this.timepicker.destructor();
     }
-	}
-}
+  },
+};
 </script>

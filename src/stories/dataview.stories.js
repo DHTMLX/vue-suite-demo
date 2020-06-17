@@ -1,11 +1,11 @@
-import DataviewBase from '../components/dataview/DataviewBase';
-import DataviewConfigurated from '../components/dataview/DataviewConfigurated';
-import DataviewData from '../components/dataview/DataviewData';
-import DataviewCdn from '../components/dataview/DataviewCdn';
-import DataviewEvents from '../components/dataview/DataviewEvents';
+import DataviewBase from "../components/dataview/DataviewBase";
+import DataviewConfigurated from "../components/dataview/DataviewConfigurated";
+import DataviewData from "../components/dataview/DataviewData";
+import DataviewCdn from "../components/dataview/DataviewCdn";
+import DataviewEvents from "../components/dataview/DataviewEvents";
 
 export default {
-    title: 'Dataview',
+  title: "Dataview",
 };
 
 export const base = () => ({
@@ -34,7 +34,7 @@ export const configurated = () => ({
       keyNavigation: true,
       multiselection: true,
       dragMode: "both",
-      template: (item) => `
+      template: item => `
         <div class="template template__container">
           <img
             class="template__image"
@@ -44,7 +44,7 @@ export const configurated = () => ({
           <p class="template__description">${item.short}</з>
         </div>
       `,
-    }
+    },
   }),
   template: `
     <section class="dhx-container">

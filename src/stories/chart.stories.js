@@ -1,11 +1,11 @@
-import ChartBase from '../components/chart/ChartBase';
-import ChartConfigurated from '../components/chart/ChartConfigurated';
-import ChartData from '../components/chart/ChartData';
-import ChartCdn from '../components/chart/ChartCdn';
-import ChartEvents from '../components/chart/ChartEvents';
+import ChartBase from "../components/chart/ChartBase";
+import ChartConfigurated from "../components/chart/ChartConfigurated";
+import ChartData from "../components/chart/ChartData";
+import ChartCdn from "../components/chart/ChartCdn";
+import ChartEvents from "../components/chart/ChartEvents";
 
 export default {
-    title: 'Chart',
+  title: "Chart",
 };
 
 export const base = () => ({
@@ -29,27 +29,27 @@ export const configurated = () => ({
   data: () => ({
     options: {
       type: "spline",
-			scales: {
-				"bottom": {
-					text: "month"
-				},
-				"left": {
-					maxTicks: 10,
-					max: 100,
-					min: 0
-				}
-			},
-			series: [
-				{
-					id: "A",
-					value: "company C",
-					color: "#5E83BA",
-					pointType: "circle",
-					fill: "#5E83BA",
-					barWidth: 35
-				}
-			]
-    }
+      scales: {
+        bottom: {
+          text: "month",
+        },
+        left: {
+          maxTicks: 10,
+          max: 100,
+          min: 0,
+        },
+      },
+      series: [
+        {
+          id: "A",
+          value: "company C",
+          color: "#5E83BA",
+          pointType: "circle",
+          fill: "#5E83BA",
+          barWidth: 35,
+        },
+      ],
+    },
   }),
   template: `
     <section class="dhx-container">

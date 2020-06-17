@@ -1,5 +1,5 @@
 <template>
-	<div ref="ribbon"></div>
+  <div ref="ribbon"></div>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ import "@mdi/font/css/materialdesignicons.min.css";
 export default {
   name: "RibbonBase",
   data: () => ({
-    ribbon: null
+    ribbon: null,
   }),
   mounted() {
     this.ribbon = new RibbonDHX(this.$refs.ribbon, {
@@ -18,9 +18,9 @@ export default {
     this.ribbon.data.load("https://dhtmlx.github.io/react-widgets/static/ribbon.json");
   },
   beforeDestroy() {
-		if (this.ribbon) {
+    if (this.ribbon) {
       this.ribbon.destructor();
     }
-	}
-}
+  },
+};
 </script>

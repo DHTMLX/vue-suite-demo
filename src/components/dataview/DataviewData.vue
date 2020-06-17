@@ -2,9 +2,11 @@
   <div>
     <div class="dhx-container--button">
       <button @click="handleClick('reset')" class="custom-button">Reset</button>
-      <button @click="handleClick('remove')" class="custom-button">Remove first item</button>
+      <button @click="handleClick('remove')" class="custom-button">
+        Remove first item
+      </button>
     </div>
-    <div ref="dataview" style="height: 400px; padding: 0 24px"></div>
+    <div ref="dataview" style="height: 400px; padding: 0 24px;"></div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
   data: () => ({
     data: new DataCollection(),
     dataview: null,
-    renderTemplate: (item) => `
+    renderTemplate: item => `
       <div class="template template__container">
         <img
           class="template__image"
@@ -24,17 +26,17 @@ export default {
         <h2 class="template__title">${item.title}</h2>
         <p class="template__description">${item.short}</з>
       </div>
-    `
+    `,
   }),
   methods: {
     handleClick(action) {
-    if (action === "reset") {
-      this.data.removeAll();
-      this.data.load("https://dhtmlx.github.io/react-widgets/static/dataview.json");
-    } else if (action === "remove") {
-      this.data.remove(this.data.getId(0));
-    }
-  }
+      if (action === "reset") {
+        this.data.removeAll();
+        this.data.load("https://dhtmlx.github.io/react-widgets/static/dataview.json");
+      } else if (action === "remove") {
+        this.data.remove(this.data.getId(0));
+      }
+    },
   },
   mounted() {
     this.dataview = new DataviewDHX(this.$refs.dataview, {
@@ -42,15 +44,15 @@ export default {
       template: this.renderTemplate,
       itemsInRow: 4,
       gap: 10,
-      data: this.data
+      data: this.data,
     });
 
     this.data.load("https://dhtmlx.github.io/react-widgets/static/dataview.json");
   },
   beforeDestroy() {
-		if (this.dataview) {
+    if (this.dataview) {
       this.dataview.destructor();
     }
-	}
-}
+  },
+};
 </script>

@@ -1,11 +1,11 @@
-import GridBase from '../components/grid/GridBase';
-import GridConfigurated from '../components/grid/GridConfigurated';
-import GridData from '../components/grid/GridData';
-import GridCdn from '../components/grid/GridCdn';
-import GridEvents from '../components/grid/GridEvents';
+import GridBase from "../components/grid/GridBase";
+import GridConfigurated from "../components/grid/GridConfigurated";
+import GridData from "../components/grid/GridData";
+import GridCdn from "../components/grid/GridCdn";
+import GridEvents from "../components/grid/GridEvents";
 
 export default {
-    title: "Grid",
+  title: "Grid",
 };
 
 export const base = () => ({
@@ -29,23 +29,23 @@ export const configurated = () => ({
   data: () => ({
     options: {
       columns: [
-        { id: 'country', header: [{text: 'Country'}] },
-        { id: 'population', header: [{text: 'Population'}] },
-        { id: 'yearlyChange', header: [{text: 'Yearly Change'}] },
-        { id: 'netChange', header: [{text: 'Net Change'}] },
-        { id: 'destiny', header: [{text: 'Density (P/Km²)'}] },
-        { id: 'area', header: [{text: 'Land Area (Km²)'}] },
-        { id: 'migrants', header: [{text: 'Migrants (net)'}] },
-        { id: 'fert', header: [{text: 'Fert. Rate'}] },
-        { id: 'age', header: [{text: 'Med. Age'}] },
-        { id: 'urban', header: [{text: 'Urban Pop'}] },
+        { id: "country", header: [{ text: "Country" }] },
+        { id: "population", header: [{ text: "Population" }] },
+        { id: "yearlyChange", header: [{ text: "Yearly Change" }] },
+        { id: "netChange", header: [{ text: "Net Change" }] },
+        { id: "destiny", header: [{ text: "Density (P/Km²)" }] },
+        { id: "area", header: [{ text: "Land Area (Km²)" }] },
+        { id: "migrants", header: [{ text: "Migrants (net)" }] },
+        { id: "fert", header: [{ text: "Fert. Rate" }] },
+        { id: "age", header: [{ text: "Med. Age" }] },
+        { id: "urban", header: [{ text: "Urban Pop" }] },
       ],
-			rowHeight: 60,
-			autoWidth: true,
-			editable: true,
-			multiselection: true,
-			selection: "complex",
-    }
+      rowHeight: 60,
+      autoWidth: true,
+      editable: true,
+      multiselection: true,
+      selection: "complex",
+    },
   }),
   template: `
     <section class="dhx-container">
