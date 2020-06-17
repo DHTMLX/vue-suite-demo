@@ -3,12 +3,13 @@
 </template>
 
 <script>
-export default {
-  name: "App",
-};
+  export default {
+    name: "App",
+  };
 </script>
 
 <style>
-@import "./index.css";
-@import "@mdi/font/css/materialdesignicons.min.css";
+  @import "@mdi/font/css/materialdesignicons.min.css";
+  @import "dhx-suite/codebase/suite.min.css";
+  @import "./index.css";
 </style>
