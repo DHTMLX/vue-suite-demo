@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook",
-    "prettier": "prettier --write */**/*.{js,html,css,vue}"
+    "build-storybook": "build-storybook -s public",
+    "prettier": "prettier --write */**/*.{js,html,css,vue}",
+    "deploy": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "@mdi/font": "^5.3.45",
@@ -28,6 +29,7 @@
     "babel-preset-vue": "^2.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gh-pages": "^3.0.0",
     "prettier": "^2.0.5",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11"
