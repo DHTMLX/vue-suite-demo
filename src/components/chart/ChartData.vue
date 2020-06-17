@@ -1,20 +1,22 @@
 <template>
-  <section style="width: 600px; height: 400px">
+  <section style="width: 600px; height: 400px;">
     <div class="dhx-container--button">
       <button @click="handleClick('reset')" class="custom-button">Reset</button>
-      <button @click="handleClick('remove')" class="custom-button">Remove first item</button>
+      <button @click="handleClick('remove')" class="custom-button">
+        Remove first item
+      </button>
     </div>
     <div ref="chart"></div>
   </section>
 </template>
 
 <script>
-import { Chart as ChartDHX, DataCollection} from "dhx-suite";
+import { Chart as ChartDHX, DataCollection } from "dhx-suite";
 export default {
   name: "ChartData",
   data: () => ({
     data: new DataCollection(),
-    chart: null
+    chart: null,
   }),
   methods: {
     handleClick(action) {
@@ -24,7 +26,7 @@ export default {
       } else if (action === "remove") {
         this.data.remove(this.data.getId(0));
       }
-    }
+    },
   },
   mounted() {
     this.chart = new ChartDHX(this.$refs.chart, {
@@ -32,7 +34,7 @@ export default {
       data: this.data,
       scales: {
         bottom: {
-          text: 'month',
+          text: "month",
         },
         left: {
           maxTicks: 10,
@@ -42,22 +44,22 @@ export default {
       },
       series: [
         {
-          id: 'A',
-          value: 'company C',
-          color: '#5E83BA',
-          pointType: 'circle',
-          fill: '#5E83BA',
+          id: "A",
+          value: "company C",
+          color: "#5E83BA",
+          pointType: "circle",
+          fill: "#5E83BA",
           barWidth: 35,
         },
       ],
     });
 
-    this.chart.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
+    this.data.load("https://dhtmlx.github.io/react-widgets/static/chart.json");
   },
   beforeDestroy() {
-		if (this.chart && this.chart.destroy) {
-      this.chart.destroy();
+    if (this.chart) {
+      this.chart.destructor();
     }
-	}
-}
+  },
+};
 </script>

@@ -1,11 +1,11 @@
-import ChartBase from '../components/chart/ChartBase';
-import ChartConfigurated from '../components/chart/ChartConfigurated';
-import ChartData from '../components/chart/ChartData';
-import ChartCdn from '../components/chart/ChartCdn';
-import ChartEvents from '../components/chart/ChartEvents';
+import ChartBase from "../components/chart/ChartBase";
+import ChartConfigurated from "../components/chart/ChartConfigurated";
+import ChartData from "../components/chart/ChartData";
+import ChartCdn from "../components/chart/ChartCdn";
+import ChartEvents from "../components/chart/ChartEvents";
 
 export default {
-    title: 'Chart',
+  title: "Chart",
 };
 
 export const base = () => ({
@@ -14,7 +14,7 @@ export const base = () => ({
     <section class="dhx-container">
       <h3>Basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ChartBase.vue"
         target="_blank"
       >
         Source code
@@ -29,33 +29,33 @@ export const configurated = () => ({
   data: () => ({
     options: {
       type: "spline",
-			scales: {
-				"bottom": {
-					text: "month"
-				},
-				"left": {
-					maxTicks: 10,
-					max: 100,
-					min: 0
-				}
-			},
-			series: [
-				{
-					id: "A",
-					value: "company C",
-					color: "#5E83BA",
-					pointType: "circle",
-					fill: "#5E83BA",
-					barWidth: 35
-				}
-			]
-    }
+      scales: {
+        bottom: {
+          text: "month",
+        },
+        left: {
+          maxTicks: 10,
+          max: 100,
+          min: 0,
+        },
+      },
+      series: [
+        {
+          id: "A",
+          value: "company C",
+          color: "#5E83BA",
+          pointType: "circle",
+          fill: "#5E83BA",
+          barWidth: 35,
+        },
+      ],
+    },
   }),
   template: `
     <section class="dhx-container">
       <h3>Pre-configured component</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ChartConfigurated.vue"
         target="_blank"
       >
         Source code
@@ -73,7 +73,7 @@ export const data = () => ({
     <section class="dhx-container">
       <h3>Work with data</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ChartData.vue"
         target="_blank"
       >
         Source code
@@ -89,7 +89,7 @@ export const CDN = () => ({
     <section class="dhx-container">
       <h3>CDN basic initialization</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ChartCdn.vue"
         target="_blank"
       >
         Source code
@@ -105,7 +105,7 @@ export const Events = () => ({
     <section class="dhx-container">
       <h3>Component Events</h3>
       <a class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/ChartEvents.vue"
         target="_blank"
       >
         Source code

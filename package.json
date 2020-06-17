@@ -1,17 +1,17 @@
 {
   "name": "vue-suite-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "https://github.com/DHTMLX/vue-suite-demo",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 6006 -s public"
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook",
+    "prettier": "prettier --write */**/*.{js,html,css,vue}"
   },
   "dependencies": {
     "@mdi/font": "^5.3.45",
     "core-js": "^3.6.5",
-    "dhx-suite": "^6.4.2",
+    "dhx-suite": "^6.5.1",
     "from-cdn": "^1.0.1",
     "vue": "^2.6.11"
   },
@@ -28,6 +28,7 @@
     "babel-preset-vue": "^2.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.0.5",
     "vue-loader": "^15.9.2",
     "vue-template-compiler": "^2.6.11"
   },
