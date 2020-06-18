@@ -1,4 +1,4 @@
-<p align="left">
+<p align="center">
 	<a href="https://dhtmlx.github.io/vue-suite-demo/?path=/story/calendar--base"><img src="https://dhtmlx.github.io/vue-suite-demo/logo.svg" width="150" height="55"></a>
 </p>
 
