@@ -3,11 +3,12 @@
 </template>
 
 <script>
-import { Sidebar as SidebarDHX } from "dhx-suite";
+import { Sidebar as SidebarDHX, TreeCollection } from "dhx-suite";
 export default {
   name: "SidebarConfigurated",
   data: () => ({
     sidebar: null,
+    data: new TreeCollection(),
   }),
   props: {
     options: {
@@ -18,6 +19,7 @@ export default {
   mounted() {
     this.sidebar = new SidebarDHX(this.$refs.sidebar, {
       ...this.options,
+      data: this.data,
     });
 
     this.sidebar.data.load("https://dhtmlx.github.io/react-widgets/static/sidebar.json");

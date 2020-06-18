@@ -14,17 +14,19 @@
 </template>
 
 <script>
-import { Toolbar as ToolbarDHX } from "dhx-suite";
+import { Toolbar as ToolbarDHX, TreeCollection } from "dhx-suite";
 export default {
   name: "ToolbarBase",
   data: () => ({
     events: [],
     toolbar: null,
+    data: new TreeCollection(),
   }),
   mounted() {
     this.toolbar = new ToolbarDHX(this.$refs.toolbar, {
       css: "dhx_widget--bordered",
       controls: true,
+      data: this.data,
     });
     this.toolbar.data.load("https://dhtmlx.github.io/react-widgets/static/toolbar.json");
 

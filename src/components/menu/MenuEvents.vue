@@ -14,16 +14,18 @@
 </template>
 
 <script>
-import { Menu as MenuDHX } from "dhx-suite";
+import { Menu as MenuDHX, TreeCollection } from "dhx-suite";
 export default {
   name: "MenuEvents",
   data: () => ({
     events: [],
     menu: null,
+    data: new TreeCollection()
   }),
   mounted() {
     this.menu = new MenuDHX(this.$refs.menu, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
+      data: this.data,
     });
     this.menu.data.load("https://dhtmlx.github.io/react-widgets/static/menu.json");
 

@@ -3,11 +3,12 @@
 </template>
 
 <script>
-import { Toolbar as ToolbarDHX } from "dhx-suite";
+import { Toolbar as ToolbarDHX, TreeCollection } from "dhx-suite";
 export default {
   name: "toolbarConfigurated",
   data: () => ({
     toolbar: null,
+    data: new TreeCollection(),
   }),
   props: {
     options: {
@@ -18,6 +19,7 @@ export default {
   mounted() {
     this.toolbar = new ToolbarDHX(this.$refs.toolbar, {
       ...this.options,
+      data: this.data,
     });
 
     this.toolbar.data.load("https://dhtmlx.github.io/react-widgets/static/toolbar.json");

@@ -18,7 +18,7 @@ export default {
       this.popup = new dhx.Popup({
         css: "dhx_widget--bordered",
       });
-      this.popup.attachHTML("<div style='padding: 16px; text-align: center'>Hi there, <br/> welcome to DHTMLX-react popup sample</div>");
+      this.popup.attachHTML("<div style='padding: 16px; text-align: center'>Hi there, <br/> welcome to DHTMLX-vue popup sample</div>");
     });
   },
   methods: {

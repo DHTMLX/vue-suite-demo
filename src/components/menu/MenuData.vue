@@ -23,7 +23,6 @@ export default {
       this.data.update("edit", {
         disabled: !this.data.getItem("edit").disabled,
       });
-      //console.log(this.data.getItem("edit"));
     },
   },
   mounted() {

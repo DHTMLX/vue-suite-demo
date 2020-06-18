@@ -29,7 +29,7 @@ export const configurated = () => ({
   data: () => ({
     options: {
       multiselection: true,
-      label: "DHX-angular combobox",
+      label: "DHX-vue combobox",
       labelPosition: "top",
       labelWidth: 150,
       selectAllButton: true,
