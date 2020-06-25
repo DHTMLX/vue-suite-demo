@@ -58,7 +58,7 @@ export const CDN = () => ({
       <h3>CDN basic initialization</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/calendar/CalendarCdn.vues"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/calendar/CalendarCdn.vue"
         target="_blank"
       >
         Source code
@@ -75,7 +75,7 @@ export const events = () => ({
       <h3>Component Events</h3>
       <a
         class="source-link"
-        href="https://github.com/DHTMLX/app/vue-suite-demo/blob/master/src/components/calendar/CalendarEvents.vue"
+        href="https://github.com/DHTMLX/vue-suite-demo/blob/master/src/components/calendar/CalendarEvents.vue"
         target="_blank"
       >
         Source code
