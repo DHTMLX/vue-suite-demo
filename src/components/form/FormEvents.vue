@@ -24,7 +24,6 @@ export default {
   mounted() {
     this.form = new FormDHX(this.$refs.form, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
-      gravity: false,
       width: 400,
       rows: [
         {
@@ -33,14 +32,12 @@ export default {
           icon: "dxi-magnify",
           placeholder: "John Doe",
           required: true,
-          id: "name",
           name: "name",
         },
         {
           type: "datepicker",
           label: "Date",
           required: true,
-          id: "date",
           name: "date",
         },
         {
@@ -48,19 +45,17 @@ export default {
           controls: "true",
           label: "Time",
           required: true,
-          id: "time",
           name: "time",
         },
         {
           type: "simpleVault",
           required: true,
           label: "Files",
-          id: "simplevault",
           name: "simplevault",
         },
         {
           type: "button",
-          value: "Send",
+          text: "Send",
           size: "medium",
           view: "flat",
           submit: true,
@@ -69,22 +64,62 @@ export default {
       ],
     });
 
-    this.form.events.on("change", (name, newValue) => {
-      const info = { name, newValue };
+    this.form.events.on("change", (name, value) => {
+      const info = { name, value };
       const keyId = Math.random();
       this.events = [{ keyId, name: "change", value: JSON.stringify(info) }].concat(this.events);
     });
-    this.form.events.on("change", id => {
-      const keyId = Math.random();
-      this.events = [{ keyId, name: "change", value: id }].concat(this.events);
-    });
-    this.form.events.on("buttonClick", id => {
+    this.form.events.on("click", id => {
       const keyId = Math.random();
       this.events = [{ keyId, name: "buttonClick", value: id }].concat(this.events);
     });
-    this.form.events.on("validationFail", id => {
+    this.form.events.on("beforeHide", (name, value) => {
+      const info = { name, value };
       const keyId = Math.random();
-      this.events = [{ keyId, name: "validationFail", value: id }].concat(this.events);
+      this.events = [{ keyId, name: "beforeHide", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("afterHide", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterHide", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("beforeShow", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeShow", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("afterShow", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterShow", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("beforeValidate", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeValidate", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("afterValidate", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterValidate", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("beforeChangeProperties", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeChangeProperties", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("afterChangeProperties", (name, value) => {
+      const info = { name, value };
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterChangeProperties", value: JSON.stringify(info) }].concat(this.events);
+    });
+    this.form.events.on("afterSend", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterSend", value: "" }].concat(this.events);
+    });
+    this.form.events.on("beforeSend", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeSend", value: "" }].concat(this.events);
     });
   },
   beforeDestroy() {

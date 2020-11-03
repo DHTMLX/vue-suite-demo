@@ -108,6 +108,62 @@ export default {
       const keyId = Math.random();
       this.events = [{ keyId, name: "itemMouseOver", value: id }].concat(this.events);
     });
+    this.list.events.on("beforeDrag", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeDrag" }].concat(this.events);
+    });
+    this.list.events.on("beforeDrop", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeDrop" }].concat(this.events);
+    });
+    this.list.events.on("beforeDrop", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeDrop" }].concat(this.events);
+    });
+    this.list.events.on("dragStart", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "dragStart" }].concat(this.events);
+    });
+    this.list.events.on("afterDrag", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterDrag" }].concat(this.events);
+    });
+    this.list.events.on("canDrop", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "canDrop" }].concat(this.events);
+    });
+    this.list.events.on("cancelDrop", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "cancelDrop" }].concat(this.events);
+    });
+    this.list.events.on("afterDrop", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterDrop" }].concat(this.events);
+    });
+    this.list.events.on("dragOut", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "dragOut" }].concat(this.events);
+    });
+      this.list.events.on("dragIn", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "dragIn" }].concat(this.events);
+    });
+    this.list.events.on("beforeSelect", id => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeSelect", value: id }].concat(this.events);
+    });
+    this.list.events.on("afterSelect", id => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterSelect", value: id }].concat(this.events);
+    });
+    this.list.events.on("beforeUnSelect", id => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeUnSelect", value: id }].concat(this.events);
+    });
+    this.list.events.on("afterUnSelect", id => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterUnSelect", value: id }].concat(this.events);
+    });
   },
   beforeDestroy() {
     if (this.list) {

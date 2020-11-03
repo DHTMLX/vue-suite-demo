@@ -12,7 +12,6 @@ export default {
   mounted() {
     this.form = new FormDHX(this.$refs.form, {
       css: "dhx_widget--bordered dhx_widget--bg_white",
-      gravity: false,
       width: 400,
       rows: [
         {
@@ -34,14 +33,12 @@ export default {
         },
         {
           type: "checkbox",
-          label: "I agree",
+          text: "I agree",
           name: "agree",
-          labelPosition: "right",
-          value: "checkboxvalue",
         },
         {
           type: "button",
-          value: "Send",
+          text: "Send",
           size: "medium",
           view: "flat",
           submit: true,
