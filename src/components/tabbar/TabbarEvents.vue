@@ -26,6 +26,7 @@ export default {
       mode: "top",
       css: "dhx_widget--bordered dhx_widget--bg_white",
       closeButtons: true,
+      tabAlign: "center", 
       views: [
         {
           id: "Vilnius",

@@ -15,6 +15,7 @@ export default {
       this.tabbar = new dhx.Tabbar(this.$refs.tabbar, {
         mode: "top",
         css: "dhx_widget--bordered dhx_widget--bg_white",
+        tabAutoWidth: true,
         views: [
           {
             id: "Vilnius",
