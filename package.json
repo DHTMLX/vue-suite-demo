@@ -13,7 +13,7 @@
     "@mdi/font": "^5.3.45",
     "@storybook/theming": "^5.3.19",
     "core-js": "^3.6.5",
-    "dhx-suite": "^6.5.8",
+    "dhx-suite": "^7.0.0",
     "from-cdn": "^1.0.1",
     "vue": "^2.6.11"
   },
