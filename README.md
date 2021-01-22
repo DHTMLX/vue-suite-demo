@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="https://dhtmlx.github.io/vue-suite-demo/?path=/story/calendar--base"><img src="https://dhtmlx.github.io/vue-suite-demo/logo.svg" width="150" height="55"></a>
+	<a href="https://dhtmlx.github.io/vue-suite-demo/?path=/story/calendar--base"><img src="https://raw.githubusercontent.com/DHTMLX/vue-suite-demo/master/public/Logo.svg" width="150" height="55"></a>
 </p>
 
 
@@ -72,7 +72,7 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 ## Useful links
 
 - [Online  documentation](https://docs.dhtmlx.com/)
-- [Support forum](https://forum.dhtmlx.com/c/suite6)
+- [Support forum](https://forum.dhtmlx.com/c/suite7)
 
 
 ## Follow us
