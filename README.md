@@ -2,7 +2,6 @@
 	<a href="https://dhtmlx.github.io/vue-suite-demo/?path=/story/calendar--base"><img src="https://raw.githubusercontent.com/DHTMLX/vue-suite-demo/master/public/Logo.svg" width="150" height="55"></a>
 </p>
 
-
 # DHTMLX Widgets + Vue
 
 [![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
@@ -16,12 +15,15 @@ In most samples DHTMLX Widgets are loaded through NPM that provides limited (GPL
 
 There are also samples where DHTMLX Widgets are loaded from CDN. `cdn.dhtmlx.com` serves limited (GPL) version of components. For production use your own CDN / file server.
 
+### Installation
 
-### Development server
+`npm install`
 
-To run the app in the development mode, run `npm storybook` in the project directory.
+### Local development
+
+`npm run storybook`
+
 Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
-
 
 ## Live demos
 
@@ -63,17 +65,14 @@ Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
 
 - [Window](https://dhtmlx.github.io/vue-suite-demo/?path=/story/window--base)
 
-
 ## License
 
 [![License: GPL v2](https://img.shields.io/badge/license-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-
 
 ## Useful links
 
 - [Online  documentation](https://docs.dhtmlx.com/)
 - [Support forum](https://forum.dhtmlx.com/c/suite7)
-
 
 ## Follow us
 
