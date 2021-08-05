@@ -53,6 +53,16 @@ export default {
       const keyId = Math.random();
       this.events = [{ keyId, name: "afterExpand", value: id }].concat(this.events);
     });
+    this.tree.events.on("beforeCheck", (index, id) => {
+      const value = JSON.stringify({index, id});
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeCheck", value }].concat(this.events);
+    });
+    this.tree.events.on("afterCheck", (index, id) => {
+      const value = JSON.stringify({index, id});
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterCheck", value }].concat(this.events);
+    });
   },
   beforeDestroy() {
     if (this.tree) {

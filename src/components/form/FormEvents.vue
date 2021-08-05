@@ -121,6 +121,21 @@ export default {
       const keyId = Math.random();
       this.events = [{ keyId, name: "beforeSend", value: "" }].concat(this.events);
     });
+    this.form.events.on("blur", (name, value) => {
+      const info = JSON.stringify({ value, name });
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "blur", value: info }].concat(this.events);
+    });
+    this.form.events.on("focus", (name, value) => {
+      const info = JSON.stringify({ value, name });
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "focus", value: info }].concat(this.events);
+    });
+    this.form.events.on("keydown", (event, id) => {
+      const value = JSON.stringify({event, id});
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "keydown", value }].concat(this.events);
+    });
   },
   beforeDestroy() {
     if (this.form) {

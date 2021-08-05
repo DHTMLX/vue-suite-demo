@@ -31,10 +31,6 @@ export default {
       const keyId = Math.random();
       this.events = [{ keyId, name: "change", value: id }].concat(this.events);
     });
-    this.combobox.events.on("open", () => {
-      const keyId = Math.random();
-      this.events = [{ keyId, name: "open", value: null }].concat(this.events);
-    });
     this.combobox.events.on("beforeClose", () => {
       const keyId = Math.random();
       this.events = [{ keyId, name: "beforeClose", value: null }].concat(this.events);
@@ -46,6 +42,28 @@ export default {
     this.combobox.events.on("input", value => {
       const keyId = Math.random();
       this.events = [{ keyId, name: "input", value }].concat(this.events);
+    });
+    this.combobox.events.on("blur", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "blur", value: null }].concat(this.events);
+    });
+    this.combobox.events.on("focus", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "focus", value: null }].concat(this.events);
+    });
+    this.combobox.events.on("keydown", (event, id) => {
+      const value = JSON.stringify({event, id});
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "keydown", value }].concat(this.events);
+    });
+    this.combobox.events.on("beforeOpen", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "beforeOpen", value: null }].concat(this.events);
+      return true;
+    });
+    this.combobox.events.on("afterOpen", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "afterOpen", value: null }].concat(this.events);
     });
   },
   beforeDestroy() {

@@ -19,7 +19,7 @@ export default {
   }),
   methods: {
     handleClick() {
-      this.data.map(() => this.data.update(this.data.getId(0), { $selected: true }));
+      this.combobox.setValue(this.data.getId(0));
     },
   },
   mounted() {

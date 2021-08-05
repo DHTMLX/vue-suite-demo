@@ -44,6 +44,19 @@ export default {
       const keyId = Math.random();
       this.events = [{ keyId, name: "mouseup", value: id }].concat(this.events);
     });
+    this.slider.events.on("blur", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "blur", value: null }].concat(this.events);
+    });
+    this.slider.events.on("focus", () => {
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "focus", value: null }].concat(this.events);
+    });
+    this.slider.events.on("keydown", (event) => {
+      const value = JSON.stringify({ event });
+      const keyId = Math.random();
+      this.events = [{ keyId, name: "keydown", value }].concat(this.events);
+    });
   },
   beforeDestroy() {
     if (this.slider) {

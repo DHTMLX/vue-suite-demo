@@ -660,6 +660,30 @@ export default {
         },
       ].concat(this.events);
     });
+    this.grid.events.on("beforeSort", (col, dir) => {
+      const value = JSON.stringify({ col, dir });
+      const keyId = Math.random();
+      this.events = [
+        {
+          keyId,
+          name: "beforeSort",
+          value,
+        },
+      ].concat(this.events);
+
+      return true;
+    });
+    this.grid.events.on("afterSort", (col, dir) => {
+      const value = JSON.stringify({ col, dir });
+      const keyId = Math.random();
+      this.events = [
+        {
+          keyId,
+          name: "afterSort",
+          value,
+        },
+      ].concat(this.events);
+    });
   },
   beforeDestroy() {
     if (this.grid) {
