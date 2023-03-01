@@ -1,5 +1,7 @@
 /* Vue components */
-
+body {
+  margin: 0;
+}
 .events-list-wrapper {
   font-family: Roboto, Arial, Tahoma, Verdana, sans-serif;
   font-size: 14px;
