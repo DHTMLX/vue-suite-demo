@@ -1,7 +1,7 @@
 /*
 @license
 
-dhtmlxSuite v.8.0.0 GPL
+dhtmlxSuite v.8.3.0 GPL
 
 This software is covered by GPL license.
 To use it in non-GPL project, you need obtain Commercial or Enterprise license
