@@ -1,15 +1,33 @@
 <template>
-  <div id="app"></div>
+  <main>
+    <Sidebar />
+    <MainContainer/>
+  </main>
 </template>
 
 <script>
+  import MainContainer from './components/MainContainer.vue';
+  import Sidebar from './components/Sidebar.vue';
+  import "@dhx/trial-suite/codebase/suite.min.css"
+
   export default {
-    name: "App",
-  };
+    components: {
+      MainContainer,
+      Sidebar
+    }
+  }
 </script>
 
+<style scoped>
+  main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+</style>
+
 <style>
-  @import "@mdi/font/css/materialdesignicons.min.css";
-  @import "dhx-suite/codebase/suite.min.css";
-  @import "./index.css";
+  .bordered {
+    border: var(--dhx-border);
+  }
 </style>
