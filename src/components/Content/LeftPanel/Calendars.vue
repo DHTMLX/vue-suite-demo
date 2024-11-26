@@ -1,6 +1,5 @@
 <template>
   <div class="calendars-wrapper">
-
     <div ref="weekNode" class="container dhx_layout_calendar_cell"></div>
     <div ref="timepickerNode" class="container dhx_layout_calendar_cell"></div>
     <div ref="yearNode" class="container dhx_layout_calendar_cell"></div>
@@ -18,7 +17,7 @@ export default {
       yearNode: null,
       week: null,
       timePicker: null,
-      year: null
+      year: null,
     };
   },
   mounted() {
@@ -48,7 +47,7 @@ export default {
     if (this.year) {
       this.year.destructor();
     }
-  }
+  },
 };
 </script>
 

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dhx/trial-suite": "^8.4.0",
+    "@dhx/trial-suite": "^9.0.0",
     "vue": "^3.3.9"
   },
   "devDependencies": {

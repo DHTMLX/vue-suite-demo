@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       node: null,
-      form: null
+      form: null,
     };
   },
   mounted() {
@@ -163,6 +163,6 @@ export default {
   },
   beforeDestroy() {
     this.form?.destructor();
-  }
+  },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div ref="node" class="container" style="flex-grow: 1;"></div>
+  <div ref="node" class="container" style="flex-grow: 1"></div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       node: null,
-      tree: null
+      tree: null,
     };
   },
 
@@ -25,6 +25,6 @@ export default {
   },
   beforeDestroy() {
     this.tree?.destructor();
-  }
+  },
 };
 </script>

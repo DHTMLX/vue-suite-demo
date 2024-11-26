@@ -1,21 +1,21 @@
 <template>
   <main>
     <Sidebar />
-    <MainContainer/>
+    <MainContainer />
   </main>
 </template>
 
 <script>
-  import MainContainer from './components/MainContainer.vue';
-  import Sidebar from './components/Sidebar.vue';
-  import "@dhx/trial-suite/codebase/suite.min.css"
+  import MainContainer from "./components/MainContainer.vue";
+  import Sidebar from "./components/Sidebar.vue";
+  import "@dhx/trial-suite/codebase/suite.min.css";
 
   export default {
     components: {
       MainContainer,
-      Sidebar
-    }
-  }
+      Sidebar,
+    },
+  };
 </script>
 
 <style scoped>

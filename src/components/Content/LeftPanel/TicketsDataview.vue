@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       node: null,
-      dataview: null
+      dataview: null,
     };
   },
   methods: {
@@ -38,7 +38,7 @@ export default {
             </div>
           </div>
         `;
-    }
+    },
   },
   mounted() {
     this.dataview = new DataView(this.$refs.node, {
@@ -50,7 +50,7 @@ export default {
   },
   beforeDestroy() {
     this.dataview?.destructor();
-  }
+  },
 };
 </script>
 

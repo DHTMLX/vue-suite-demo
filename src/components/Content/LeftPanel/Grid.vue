@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <div ref="gNode" class="grid_container"></div>
     <div ref="pNode"></div>
   </div>
@@ -16,7 +15,7 @@ export default {
       gNode: null,
       pNode: null,
       grid: null,
-      paginator: null
+      paginator: null,
     };
   },
   mounted() {
@@ -27,15 +26,14 @@ export default {
           id: "time",
           header: [{ text: "Time", align: "center" }],
           type: "date",
-          format: "%M %d, %H:%i",
+          dateFormat: "%M %d, %H:%i",
         },
         { id: "nights", header: [{ text: "Nights" }] },
         {
           id: "price",
           header: [{ text: "Price" }],
           type: "number",
-          format: "# #",
-          template: (i) => `$ ${i}`,
+          numberMask: { prefix: "$" },
         },
         {
           gravity: 3,
@@ -56,8 +54,7 @@ export default {
           id: "totalCost",
           header: [{ text: "Total Cost" }],
           type: "number",
-          format: "# #",
-          template: (i) => `$${i}`,
+          numberMask: { prefix: "$" },
         },
       ],
       autoWidth: true,
@@ -65,7 +62,7 @@ export default {
       multiselection: true,
       selection: "complex",
       editable: true,
-    }
+    };
 
     this.grid = new Grid(this.$refs.gNode, gridConfig);
     this.paginator = new Pagination(this.$refs.pNode, {
@@ -77,7 +74,7 @@ export default {
   beforeDestroy() {
     this.grid?.destructor();
     this.paginator?.destructor();
-  }
+  },
 };
 </script>
 
@@ -91,6 +88,5 @@ export default {
 .grid_container {
   min-height: 848px;
   width: 798px;
-  
 }
 </style>

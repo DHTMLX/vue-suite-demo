@@ -1,5 +1,8 @@
 <template>
-  <div ref="node" class="container colorpicker-container dhx_layout_colorpicker_cell"></div>
+  <div
+    ref="node"
+    class="container colorpicker-container dhx_layout_colorpicker_cell"
+  ></div>
 </template>
 
 <script>
@@ -9,7 +12,7 @@ export default {
   data() {
     return {
       node: null,
-      colorpicker: null
+      colorpicker: null,
     };
   },
   methods: {
@@ -56,10 +59,10 @@ export default {
         s,
         l,
       };
-    }
+    },
   },
   mounted() {
-    this.colorpicker = new Colorpicker(this.$refs.node, { mode: "picker"});
+    this.colorpicker = new Colorpicker(this.$refs.node, { mode: "picker" });
     this.colorpicker.setValue("#0288d1");
     this.colorpicker.events.on("change", (hex) => {
       const { h, s, l } = this.hexToHSLChema(hex);
@@ -72,13 +75,13 @@ export default {
   },
   beforeDestroy() {
     this.colorpicker?.destructor();
-  }
+  },
 };
 </script>
 
 <style>
-  .colorpicker-container {
-    display: flex;
-    justify-content: center;
-  }
+.colorpicker-container {
+  display: flex;
+  justify-content: center;
+}
 </style>

@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       node: null,
-      ribbon: null
+      ribbon: null,
     };
   },
   mounted() {
@@ -21,7 +21,7 @@ export default {
   },
   beforeDestroy() {
     this.ribbon?.destructor();
-  }
+  },
 };
 </script>
 

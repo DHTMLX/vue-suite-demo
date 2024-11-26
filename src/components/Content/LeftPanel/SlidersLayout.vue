@@ -1,5 +1,5 @@
 <template>
-  <div ref="node" class="container" style="flex-grow: 2;"></div>
+  <div ref="node" class="container" style="flex-grow: 2"></div>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
   methods: {
     tickTemplate(value) {
       return `${value}`;
-    }
+    },
   },
   mounted() {
     this.sliderLayout = new Layout(this.$refs.node, {
@@ -61,7 +61,7 @@ export default {
         },
       ],
     });
-    console.log(this.tickTemplate)
+    console.log(this.tickTemplate);
 
     this.slider1 = new Slider(null, {
       min: 0,
@@ -120,6 +120,6 @@ export default {
   },
   beforeDestroy() {
     this.sliderLayout?.destructor();
-  }
+  },
 };
 </script>

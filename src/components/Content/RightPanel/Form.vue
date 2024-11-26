@@ -129,7 +129,7 @@ export default {
           value: "United Kingdom",
           src: "https://snippet.dhtmlx.com/codebase/data/combobox/01/img/gb.png",
         },
-      ]
+      ],
     };
   },
   mounted() {
@@ -268,6 +268,6 @@ export default {
   },
   beforeDestroy() {
     this.form?.destructor();
-  }
+  },
 };
 </script>

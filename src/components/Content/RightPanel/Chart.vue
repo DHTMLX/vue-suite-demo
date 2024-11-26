@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       node: null,
-      chart: null
+      chart: null,
     };
   },
   mounted() {
@@ -44,6 +44,6 @@ export default {
 
   beforeDestroy() {
     this.chart?.destructor();
-  }
+  },
 };
 </script>

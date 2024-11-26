@@ -11,7 +11,7 @@ export default {
     return {
       node: null,
       accordion: null,
-      chart: null
+      chart: null,
     };
   },
   mounted() {
@@ -24,7 +24,7 @@ export default {
           padding: 40,
           id: "chart",
           collapsable: true,
-        }
+        },
       ],
     });
     this.chart = new Chart(null, {
@@ -74,11 +74,11 @@ export default {
       },
     });
     this.accordion.getCell("chart").attach(this.chart);
-    this.chart.data.parse(store.hotelsData)
+    this.chart.data.parse(store.hotelsData);
   },
   beforeDestroy() {
     this.accordion?.destructor();
     this.chart?.destructor();
-  }
+  },
 };
 </script>
