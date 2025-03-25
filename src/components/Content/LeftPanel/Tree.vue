@@ -1,30 +1,29 @@
-<template>
-  <div ref="node" class="container" style="flex-grow: 1"></div>
-</template>
-
 <script>
 import { Tree } from "@dhx/trial-suite";
-import store from "../../../store.js";
+import { getData } from "../../../data";
 
 export default {
   data() {
-    return {
-      node: null,
-      tree: null,
-    };
+    const { treeData } = getData();
+    return { treeData };
   },
 
   mounted() {
-    this.tree = new Tree(this.$refs.node, {
+    this.tree = new Tree(this.$refs.tree_container, {
+      data: this.treeData,
       checkbox: true,
       editable: true,
       keyNavigation: true,
-      dragMode: "both",
+      dragMode: "both"
     });
-    this.tree.data.parse(store.treeData);
   },
-  beforeDestroy() {
+
+  unmounted() {
     this.tree?.destructor();
-  },
+  }
 };
 </script>
+
+<template>
+  <div ref="tree_container" class="container" style="flex-grow: 1"></div>
+</template>

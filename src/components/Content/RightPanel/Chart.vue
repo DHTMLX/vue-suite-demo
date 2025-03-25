@@ -1,20 +1,15 @@
-<template>
-  <div ref="node" class="container"></div>
-</template>
-
 <script>
 import { Chart } from "@dhx/trial-suite";
-import store from "../../../store.js";
+import { getData } from "../../../data";
 
 export default {
   data() {
-    return {
-      node: null,
-      chart: null,
-    };
+    const { chartData } = getData();
+    return { chartData };
   },
   mounted() {
-    this.chart = new Chart(this.$refs.node, {
+    this.chart = new Chart(this.$refs.chart_container, {
+      data: this.chartData,
       type: "pie",
       series: [
         {
@@ -39,11 +34,14 @@ export default {
         width: 30,
       },
     });
-    this.chart.data.parse(store.chartData);
   },
 
-  beforeDestroy() {
+  unmounted() {
     this.chart?.destructor();
-  },
+  }
 };
 </script>
+
+<template>
+  <div ref="chart_container" class="container"></div>
+</template>

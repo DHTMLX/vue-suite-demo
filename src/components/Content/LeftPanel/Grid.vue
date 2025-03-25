@@ -1,44 +1,34 @@
-<template>
-  <div class="container">
-    <div ref="gNode" class="grid_container"></div>
-    <div ref="pNode"></div>
-  </div>
-</template>
-
 <script>
 import { Grid, Pagination } from "@dhx/trial-suite";
-import store from "../../../store.js";
+import { getData } from "../../../data";
 
 export default {
   data() {
-    return {
-      gNode: null,
-      pNode: null,
-      grid: null,
-      paginator: null,
-    };
+    const { gridData } = getData();
+    return { gridData };
   },
   mounted() {
     const gridConfig = {
+      data: this.gridData,
       columns: [
         {
           gravity: 2,
           id: "time",
           header: [{ text: "Time", align: "center" }],
           type: "date",
-          dateFormat: "%M %d, %H:%i",
+          dateFormat: "%M %d, %H:%i"
         },
         { id: "nights", header: [{ text: "Nights" }] },
         {
           id: "price",
           header: [{ text: "Price" }],
           type: "number",
-          numberMask: { prefix: "$" },
+          numberMask: { prefix: "$" }
         },
         {
           gravity: 3,
           id: "contactPerson",
-          header: [{ text: "Contact Person" }],
+          header: [{ text: "Contact Person" }]
         },
         {
           gravity: 4,
@@ -47,36 +37,43 @@ export default {
           htmlEnable: true,
           template: (text) => {
             return `<span class="contact_email";>${text}</span>`;
-          },
+          }
         },
         {
           gravity: 2,
           id: "totalCost",
           header: [{ text: "Total Cost" }],
           type: "number",
-          numberMask: { prefix: "$" },
-        },
+          numberMask: { prefix: "$" }
+        }
       ],
       autoWidth: true,
       css: "grid",
       multiselection: true,
       selection: "complex",
-      editable: true,
+      editable: true
     };
 
-    this.grid = new Grid(this.$refs.gNode, gridConfig);
-    this.paginator = new Pagination(this.$refs.pNode, {
+    this.grid = new Grid(this.$refs.grid_container, gridConfig);
+    this.pagination = new Pagination(this.$refs.pagination_container, {
       pageSize: 20,
-      data: this.grid.data,
+      data: this.grid.data
     });
-    this.grid.data.parse(store.gridDataset);
   },
-  beforeDestroy() {
+
+  unmounted() {
     this.grid?.destructor();
-    this.paginator?.destructor();
-  },
+    this.pagination?.destructor();
+  }
 };
 </script>
+
+<template>
+  <div class="container">
+    <div ref="grid_container" class="grid_container"></div>
+    <div ref="pagination_container"></div>
+  </div>
+</template>
 
 <style scoped>
 .container {

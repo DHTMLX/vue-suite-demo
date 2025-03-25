@@ -12,8 +12,8 @@ import RightContent from "./RightPanel/RightContent.vue";
 export default {
   components: {
     LeftContent,
-    RightContent,
-  },
+    RightContent
+  }
 };
 </script>
   
@@ -25,8 +25,7 @@ export default {
   padding: 12px;
   gap: 12px;
 }
-</style>
-<style>
+
 .container {
   border: var(--dhx-border);
 }

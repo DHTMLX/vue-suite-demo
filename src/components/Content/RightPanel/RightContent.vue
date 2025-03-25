@@ -1,13 +1,3 @@
-<template>
-  <div class="right-content-wrapper">
-    <Chart />
-    <Form />
-    <ButtonsForm />
-    <Colorpicker />
-    <MessageDataview />
-  </div>
-</template>
-
 <script>
 import Chart from "./Chart.vue";
 import Form from "./Form.vue";
@@ -21,10 +11,20 @@ export default {
     Form,
     ButtonsForm,
     Colorpicker,
-    MessageDataview,
-  },
+    MessageDataview
+  }
 };
 </script>
+
+<template>
+  <div class="right-content-wrapper">
+    <Chart />
+    <Form />
+    <ButtonsForm />
+    <Colorpicker />
+    <MessageDataview />
+  </div>
+</template>
 
 <style>
 .right-content-wrapper {

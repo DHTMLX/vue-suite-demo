@@ -1,20 +1,7 @@
-<template>
-  <div
-    ref="node"
-    class="container colorpicker-container dhx_layout_colorpicker_cell"
-  ></div>
-</template>
-
 <script>
 import { Colorpicker } from "@dhx/trial-suite";
 
 export default {
-  data() {
-    return {
-      node: null,
-      colorpicker: null,
-    };
-  },
   methods: {
     hexToHSLChema(HEX) {
       let r = 0,
@@ -59,10 +46,10 @@ export default {
         s,
         l,
       };
-    },
+    }
   },
   mounted() {
-    this.colorpicker = new Colorpicker(this.$refs.node, { mode: "picker" });
+    this.colorpicker = new Colorpicker(this.$refs.colorpicker_container, { mode: "picker" });
     this.colorpicker.setValue("#0288d1");
     this.colorpicker.events.on("change", (hex) => {
       const { h, s, l } = this.hexToHSLChema(hex);
@@ -73,11 +60,19 @@ export default {
       el.style.setProperty("--dhx-l-primary", l + "%");
     });
   },
-  beforeDestroy() {
+  
+  unmounted() {
     this.colorpicker?.destructor();
-  },
+  }
 };
 </script>
+
+<template>
+  <div
+    ref="colorpicker_container"
+    class="container colorpicker-container dhx_layout_colorpicker_cell"
+  ></div>
+</template>
 
 <style>
 .colorpicker-container {

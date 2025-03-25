@@ -1,19 +1,9 @@
-<template>
-  <div ref="node" class="container"></div>
-</template>
-
 <script>
 import { Form } from "@dhx/trial-suite";
 
 export default {
-  data() {
-    return {
-      node: null,
-      form: null,
-    };
-  },
   mounted() {
-    this.form = new Form(this.$refs.node, {
+    this.form = new Form(this.$refs.buttons_form_container, {
       height: "content",
       padding: 40,
       align: "between",
@@ -50,8 +40,8 @@ export default {
               full: true,
               disabled: true,
               size: "small",
-            },
-          ],
+            }
+          ]
         },
         {
           align: "between",
@@ -85,8 +75,8 @@ export default {
               full: true,
               size: "small",
               disabled: true,
-            },
-          ],
+            }
+          ]
         },
         {
           align: "between",
@@ -120,8 +110,8 @@ export default {
               full: true,
               size: "small",
               disabled: true,
-            },
-          ],
+            }
+          ]
         },
         {
           align: "between",
@@ -155,14 +145,19 @@ export default {
               full: true,
               size: "small",
               disabled: true,
-            },
-          ],
-        },
-      ],
+            }
+          ]
+        }
+      ]
     });
   },
-  beforeDestroy() {
+
+  unmounted() {
     this.form?.destructor();
-  },
+  }
 };
 </script>
+
+<template>
+  <div ref="buttons_form_container" class="container"></div>
+</template>

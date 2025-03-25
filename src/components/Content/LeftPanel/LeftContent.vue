@@ -1,21 +1,7 @@
-<template>
-  <div class="left-content-wrapper">
-    <Grid />
-    <Calendars />
-    <Accordion />
-    <div class="block">
-      <SlidersLayout />
-      <Tree />
-    </div>
-    <Ribbon />
-    <TicketsDataview />
-  </div>
-</template>
-  
 <script>
 import Calendars from "./Calendars.vue";
 import Grid from "./Grid.vue";
-import Accordion from "./Accordion.vue";
+import Accordion from "./Chart.vue";
 import Ribbon from "./Ribbon.vue";
 import SlidersLayout from "./SlidersLayout.vue";
 import TicketsDataview from "./TicketsDataview.vue";
@@ -29,10 +15,24 @@ export default {
     Ribbon,
     SlidersLayout,
     TicketsDataview,
-    Tree,
-  },
+    Tree
+  }
 };
 </script>
+
+<template>
+  <div class="left-content-wrapper">
+    <Grid />
+    <Calendars />
+    <Accordion />
+    <div class="block">
+      <SlidersLayout />
+      <Tree />
+    </div>
+    <Ribbon />
+    <TicketsDataview />
+  </div>
+</template>
   
 <style scoped>
 .left-content-wrapper {
