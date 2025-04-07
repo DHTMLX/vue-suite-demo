@@ -44,10 +44,11 @@ export default {
       return {
         h,
         s,
-        l,
+        l
       };
     }
   },
+  
   mounted() {
     this.colorpicker = new Colorpicker(this.$refs.colorpicker_container, { mode: "picker" });
     this.colorpicker.setValue("#0288d1");

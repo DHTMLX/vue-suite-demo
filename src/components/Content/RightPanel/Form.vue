@@ -21,10 +21,10 @@ export default {
               type: "input",
               label: "Name",
               placeholder: "Type text",
-              required: true,
+              required: true
             },
             {
-              type: "spacer",
+              type: "spacer"
             },
             {
               width: "48%",
@@ -32,7 +32,7 @@ export default {
               type: "input",
               label: "Surname",
               placeholder: "Type text",
-              required: true,
+              required: true
             }
           ]
         },
@@ -43,27 +43,27 @@ export default {
           placeholder: "Click to select",
           multiselection: true,
           value: ["austria", "estonia"],
-          data: this.country,
+          data: this.country
         },
         {
           name: "birth",
           type: "datepicker",
           label: "Date of Birth",
           placeholder: "Type text",
-          value: new Date(),
+          value: new Date()
         },
         {
           name: "career",
           type: "input",
           label: "Career objective",
           placeholder: "Type text",
-          helpMessage: " Help information",
+          helpMessage: " Help information"
         },
         {
           name: "motivation",
           type: "textarea",
           label: "Motivation",
-          placeholder: "Type text here",
+          placeholder: "Type text here"
         },
         {
           name: "language",
@@ -75,17 +75,17 @@ export default {
               {
                 type: "radioButton",
                 text: "Elementary",
-                value: "1",
+                value: "1"
               },
               {
                 type: "radioButton",
                 text: "Intermediate",
-                value: "2",
+                value: "2"
               },
               {
                 type: "radioButton",
                 text: "Advanced",
-                value: "2",
+                value: "2"
               }
             ]
           }
@@ -94,7 +94,7 @@ export default {
           name: "backgroundColor",
           type: "colorpicker",
           label: "Background color",
-          placeholder: "Click to change",
+          placeholder: "Click to change"
         },
         {
           name: "offices",
@@ -102,12 +102,12 @@ export default {
           label: "Offices",
           placeholder: "You can select several offices",
           multiselection: true,
-          data: this.country,
+          data: this.country
         },
         {
           name: "attachDocument",
           type: "simpleVault",
-          label: "Attach document",
+          label: "Attach document"
         },
         {
           name: "howToContact",
@@ -119,22 +119,22 @@ export default {
                 id: "1",
                 type: "checkbox",
                 text: "Phone",
-                checked: true,
+                checked: true
               },
               {
                 id: "2",
                 type: "checkbox",
-                text: "Mail",
+                text: "Mail"
               },
               {
                 id: "3",
                 type: "checkbox",
-                text: "Messenger",
+                text: "Messenger"
               },
               {
                 id: "4",
                 type: "checkbox",
-                text: "Your option",
+                text: "Your option"
               }
             ]
           }

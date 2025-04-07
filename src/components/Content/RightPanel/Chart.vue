@@ -7,6 +7,7 @@ export default {
     const { chartData } = getData();
     return { chartData };
   },
+
   mounted() {
     this.chart = new Chart(this.$refs.chart_container, {
       data: this.chartData,
@@ -19,20 +20,20 @@ export default {
           opacity: "opacity",
           text: "month",
           stroke: "var(--dhx-background-primary)",
-          strokeWidth: 0,
-        },
+          strokeWidth: 0
+        }
       ],
       legend: {
         values: {
           id: "value",
           text: "id",
-          color: "color",
+          color: "color"
         },
         // monochrome: "#0288D1",
         align: "right",
         valign: "middle",
-        width: 30,
-      },
+        width: 30
+      }
     });
   },
 

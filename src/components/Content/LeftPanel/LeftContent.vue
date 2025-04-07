@@ -1,7 +1,7 @@
 <script>
+import Chart from "./Chart.vue";
 import Calendars from "./Calendars.vue";
 import Grid from "./Grid.vue";
-import Accordion from "./Chart.vue";
 import Ribbon from "./Ribbon.vue";
 import SlidersLayout from "./SlidersLayout.vue";
 import TicketsDataview from "./TicketsDataview.vue";
@@ -9,7 +9,7 @@ import Tree from "./Tree.vue";
 
 export default {
   components: {
-    Accordion,
+    Chart,
     Calendars,
     Grid,
     Ribbon,
@@ -24,7 +24,7 @@ export default {
   <div class="left-content-wrapper">
     <Grid />
     <Calendars />
-    <Accordion />
+    <Chart />
     <div class="block">
       <SlidersLayout />
       <Tree />
