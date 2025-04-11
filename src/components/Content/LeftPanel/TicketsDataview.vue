@@ -54,9 +54,3 @@ export default {
 <template>
   <div ref="dataview_container" class="tickets-container"></div>
 </template>
-
-<style>
-.tickets-container {
-  background: var(--dhx-background-primary);
-}
-</style>

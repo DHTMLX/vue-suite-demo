@@ -43,9 +43,3 @@ export default {
 <template>
   <div ref="dataview_container"></div>
 </template>
-
-<style>
-.container {
-  flex-grow: 1;
-}
-</style>

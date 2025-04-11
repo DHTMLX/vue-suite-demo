@@ -24,10 +24,3 @@ export default {
 <template>
   <div ref="ribbon_container" class="container ribbon-container"></div>
 </template>
-
-<style>
-.ribbon-container {
-  padding: 50px;
-  background: var(--dhx-background-primary);
-}
-</style>

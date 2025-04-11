@@ -69,21 +69,8 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="grid-block">
     <div ref="grid_container" class="grid_container"></div>
     <div ref="pagination_container"></div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  border: var(--dhx-border);
-}
-
-.grid_container {
-  min-height: 848px;
-  width: 798px;
-}
-</style>

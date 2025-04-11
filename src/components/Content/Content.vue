@@ -16,17 +16,3 @@ export default {
   }
 };
 </script>
-  
-<style scoped>
-.wrapper-content {
-  display: flex;
-  flex-grow: 1;
-  overflow: auto;
-  padding: 12px;
-  gap: 12px;
-}
-
-.container {
-  border: var(--dhx-border);
-}
-</style>

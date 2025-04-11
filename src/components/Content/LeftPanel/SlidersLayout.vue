@@ -108,5 +108,5 @@ export default {
 </script>
 
 <template>
-  <div ref="layout_container" class="container" style="flex-grow: 2"></div>
+  <div ref="layout_container" class="container sliders-wrapper"></div>
 </template>
