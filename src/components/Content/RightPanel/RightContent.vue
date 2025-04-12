@@ -25,15 +25,3 @@ export default {
     <MessageDataview />
   </div>
 </template>
-
-<style>
-.right-content-wrapper {
-  display: flex;
-  height: 100%;
-  width: fit-content;
-  gap: 12px;
-  flex: 1;
-  min-width: 500px;
-  flex-direction: column;
-}
-</style>

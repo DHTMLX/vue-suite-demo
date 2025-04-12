@@ -25,5 +25,5 @@ export default {
 </script>
 
 <template>
-  <div ref="tree_container" class="container" style="flex-grow: 1"></div>
+  <div ref="tree_container" class="container tree-container"></div>
 </template>

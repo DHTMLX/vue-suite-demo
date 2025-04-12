@@ -74,10 +74,3 @@ export default {
     class="container colorpicker-container dhx_layout_colorpicker_cell"
   ></div>
 </template>
-
-<style>
-.colorpicker-container {
-  display: flex;
-  justify-content: center;
-}
-</style>

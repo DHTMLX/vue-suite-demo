@@ -8,7 +8,6 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-
 }
 
 :root {
@@ -16,7 +15,6 @@ body {
   line-height: 1.5;
   font-weight: 400;
   display: flex;
-
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,6 +36,97 @@ body {
   width: 100%;
 }
 
+.app_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.wrapper-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+  padding: 12px;
+  gap: 12px;
+}
+
+.left-content-wrapper {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  gap: 12px;
+  max-width: 800px;
+  flex-direction: column;
+}
+
+.left-content-block {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.grid-block {
+  display: flex;
+  flex-direction: column;
+  border: var(--dhx-border);
+}
+
+.grid_container {
+  min-height: 848px;
+  width: 798px;
+}
+
+.calendars-wrapper {
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.tickets-container {
+  background: var(--dhx-background-primary);
+}
+
+.sliders-wrapper {
+  flex-grow: 2;
+}
+
+.tree-container {
+  flex-grow: 1
+}
+
+.ribbon-container {
+  padding: 50px;
+  background: var(--dhx-background-primary);
+}
+
+.right-content-wrapper {
+  display: flex;
+  height: 100%;
+  width: fit-content;
+  gap: 12px;
+  flex: 1;
+  min-width: 500px;
+  flex-direction: column;
+}
+
+.container {
+  border: var(--dhx-border);
+}
+
+.colorpicker-container {
+  display: flex;
+  justify-content: center;
+}
 
 /* Grid styling */
 .contact_email {
@@ -47,7 +136,6 @@ body {
 .grid .dhx_grid-content {
   border: none;
 }
-
 
 /* Tickets dataview styling */
 .dhx_dataview_template_a {
@@ -188,7 +276,6 @@ body {
   font-size: 20px;
   margin-left: 6px;
 }
-
 
 /* Message dataview styling */
 .dhx_dataview_template_b_box {

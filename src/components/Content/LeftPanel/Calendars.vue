@@ -37,13 +37,3 @@ export default {
     <div ref="year_container" class="container dhx_layout_calendar_cell"></div>
   </div>
 </template>
-
-<style scoped>
-.calendars-wrapper {
-  display: flex;
-  height: fit-content;
-  flex-direction: row;
-  gap: 12px;
-  justify-content: space-between;
-}
-</style>
