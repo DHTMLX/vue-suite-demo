@@ -23,5 +23,5 @@ export default {
 </script>
 
 <template>
-  <div ref="tabbar_container"></div>
+  <div ref="tabbar_container" class="tabbar_widget"></div>
 </template>

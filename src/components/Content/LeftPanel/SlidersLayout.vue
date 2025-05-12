@@ -108,5 +108,5 @@ export default {
 </script>
 
 <template>
-  <div ref="layout_container" class="container sliders-wrapper"></div>
+  <div ref="layout_container" class="sliders_widget"></div>
 </template>

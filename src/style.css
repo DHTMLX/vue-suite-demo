@@ -464,3 +464,23 @@ body {
 .dhx-container__widget {
   height: 100%;
 }
+
+.tabbar_widget {
+  border-top: 1px solid rgb(226, 225, 225);
+}
+
+.tree_widget {
+  padding: 10px;
+  background: white;
+  width: 50%;
+  flex-grow: 1;
+  border: var(--dhx-border);
+}
+
+.sliders_widget {
+  padding: 10px;
+  background: white;
+  width: 50%;
+  flex-grow: 1;
+  border: var(--dhx-border);
+}

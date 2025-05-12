@@ -25,5 +25,5 @@ export default {
 </script>
 
 <template>
-  <div ref="tree_container" class="container tree-container"></div>
+  <div ref="tree_container" class="tree_widget"></div>
 </template>
