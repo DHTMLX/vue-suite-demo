@@ -50,7 +50,6 @@ export default {
 
   unmounted() {
     this.layout?.destructor();
-    this.chart?.destructor();
   }
 };
 </script>
