@@ -1,13 +1,3 @@
-<template>
-  <div class="right-content-wrapper">
-    <Chart />
-    <Form />
-    <ButtonsForm />
-    <Colorpicker />
-    <MessageDataview />
-  </div>
-</template>
-
 <script>
 import Chart from "./Chart.vue";
 import Form from "./Form.vue";
@@ -21,19 +11,17 @@ export default {
     Form,
     ButtonsForm,
     Colorpicker,
-    MessageDataview,
-  },
+    MessageDataview
+  }
 };
 </script>
 
-<style>
-.right-content-wrapper {
-  display: flex;
-  height: 100%;
-  width: fit-content;
-  gap: 12px;
-  flex: 1;
-  min-width: 500px;
-  flex-direction: column;
-}
-</style>
+<template>
+  <div class="right-content-wrapper">
+    <Chart />
+    <Form />
+    <ButtonsForm />
+    <Colorpicker />
+    <MessageDataview />
+  </div>
+</template>

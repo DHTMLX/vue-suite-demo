@@ -1,20 +1,16 @@
-<template>
-  <div ref="node" class="container"></div>
-</template>
-
 <script>
 import { Chart } from "@dhx/trial-suite";
-import store from "../../../store.js";
+import { getData } from "../../../data";
 
 export default {
   data() {
-    return {
-      node: null,
-      chart: null,
-    };
+    const { chartData } = getData();
+    return { chartData };
   },
+
   mounted() {
-    this.chart = new Chart(this.$refs.node, {
+    this.chart = new Chart(this.$refs.chart_container, {
+      data: this.chartData,
       type: "pie",
       series: [
         {
@@ -24,26 +20,29 @@ export default {
           opacity: "opacity",
           text: "month",
           stroke: "var(--dhx-background-primary)",
-          strokeWidth: 0,
-        },
+          strokeWidth: 0
+        }
       ],
       legend: {
         values: {
           id: "value",
           text: "id",
-          color: "color",
+          color: "color"
         },
         // monochrome: "#0288D1",
         align: "right",
         valign: "middle",
-        width: 30,
-      },
+        width: 30
+      }
     });
-    this.chart.data.parse(store.chartData);
   },
 
-  beforeDestroy() {
+  unmounted() {
     this.chart?.destructor();
-  },
+  }
 };
 </script>
+
+<template>
+  <div ref="chart_container" class="container"></div>
+</template>

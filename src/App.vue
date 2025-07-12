@@ -1,33 +1,19 @@
-<template>
-  <main>
-    <Sidebar />
-    <MainContainer />
-  </main>
-</template>
-
 <script>
-  import MainContainer from "./components/MainContainer.vue";
-  import Sidebar from "./components/Sidebar.vue";
+  import MainContainer from "./components/MainContainer/MainContainer.vue";
+  import Sidebar from "./components/Sidebar/Sidebar.vue";
   import "@dhx/trial-suite/codebase/suite.min.css";
 
   export default {
     components: {
       MainContainer,
-      Sidebar,
-    },
+      Sidebar
+    }
   };
 </script>
 
-<style scoped>
-  main {
-    height: 100%;
-    width: 100%;
-    display: flex;
-  }
-</style>
-
-<style>
-  .bordered {
-    border: var(--dhx-border);
-  }
-</style>
+<template>
+  <main class="app_main">
+    <Sidebar />
+    <MainContainer />
+  </main>
+</template>

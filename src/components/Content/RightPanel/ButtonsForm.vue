@@ -1,19 +1,9 @@
-<template>
-  <div ref="node" class="container"></div>
-</template>
-
 <script>
 import { Form } from "@dhx/trial-suite";
 
 export default {
-  data() {
-    return {
-      node: null,
-      form: null,
-    };
-  },
   mounted() {
-    this.form = new Form(this.$refs.node, {
+    this.form = new Form(this.$refs.buttons_form_container, {
       height: "content",
       padding: 40,
       align: "between",
@@ -29,7 +19,7 @@ export default {
               color: "primary",
               icon: "dxi dxi-plus",
               full: true,
-              size: "small",
+              size: "small"
             },
             {
               padding: 5,
@@ -39,7 +29,7 @@ export default {
               color: "primary",
               full: true,
               view: "link",
-              size: "small",
+              size: "small"
             },
             {
               padding: 5,
@@ -49,9 +39,9 @@ export default {
               color: "primary",
               full: true,
               disabled: true,
-              size: "small",
-            },
-          ],
+              size: "small"
+            }
+          ]
         },
         {
           align: "between",
@@ -64,7 +54,7 @@ export default {
               color: "secondary",
               icon: "dxi dxi-plus",
               full: true,
-              size: "small",
+              size: "small"
             },
             {
               padding: 5,
@@ -74,7 +64,7 @@ export default {
               color: "secondary",
               full: true,
               size: "small",
-              view: "link",
+              view: "link"
             },
             {
               padding: 5,
@@ -84,9 +74,9 @@ export default {
               color: "secondary",
               full: true,
               size: "small",
-              disabled: true,
-            },
-          ],
+              disabled: true
+            }
+          ]
         },
         {
           align: "between",
@@ -99,7 +89,7 @@ export default {
               color: "danger",
               icon: "dxi dxi-plus",
               full: true,
-              size: "small",
+              size: "small"
             },
             {
               padding: 5,
@@ -109,7 +99,7 @@ export default {
               color: "danger",
               full: true,
               size: "small",
-              view: "link",
+              view: "link"
             },
             {
               padding: 5,
@@ -119,9 +109,9 @@ export default {
               color: "danger",
               full: true,
               size: "small",
-              disabled: true,
-            },
-          ],
+              disabled: true
+            }
+          ]
         },
         {
           align: "between",
@@ -134,7 +124,7 @@ export default {
               color: "success",
               icon: "dxi dxi-plus",
               full: true,
-              size: "small",
+              size: "small"
             },
             {
               padding: 5,
@@ -144,7 +134,7 @@ export default {
               color: "success",
               full: true,
               size: "small",
-              view: "link",
+              view: "link"
             },
             {
               padding: 5,
@@ -154,15 +144,20 @@ export default {
               color: "success",
               full: true,
               size: "small",
-              disabled: true,
-            },
-          ],
-        },
-      ],
+              disabled: true
+            }
+          ]
+        }
+      ]
     });
   },
-  beforeDestroy() {
+
+  unmounted() {
     this.form?.destructor();
-  },
+  }
 };
 </script>
+
+<template>
+  <div ref="buttons_form_container" class="container"></div>
+</template>

@@ -1,33 +1,26 @@
-<template>
-  <div ref="node" class="container ribbon-container"></div>
-</template>
-
 <script>
 import { Ribbon } from "@dhx/trial-suite";
-import store from "../../../store.js";
+import { getData } from "../../../data";
 
 export default {
   data() {
-    return {
-      node: null,
-      ribbon: null,
-    };
+    const { ribbonData } = getData();
+    return { ribbonData };
   },
+
   mounted() {
-    this.ribbon = new Ribbon(this.$refs.node, {
-      css: "dhx_widget--bordered",
+    this.ribbon = new Ribbon(this.$refs.ribbon_container, {
+      data: this.ribbonData,
+      css: "dhx_widget--bordered"
     });
-    this.ribbon.data.parse(store.ribbonData);
   },
+
   beforeDestroy() {
     this.ribbon?.destructor();
-  },
+  }
 };
 </script>
 
-<style>
-.ribbon-container {
-  padding: 50px;
-  background: var(--dhx-background-primary);
-}
-</style>
+<template>
+  <div ref="ribbon_container" class="container ribbon-container"></div>
+</template>

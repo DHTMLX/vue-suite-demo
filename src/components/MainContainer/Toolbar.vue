@@ -1,22 +1,22 @@
-<template>
-  <div ref="node"></div>
-</template>
-
 <script>
 import { Toolbar, setTheme } from "@dhx/trial-suite";
-import store from "../store.js";
+import { getData } from "../../data";
 
 export default {
   data() {
+    const { toolbarData } = getData();
     return {
-      node: null,
-      toolbar: null,
+      toolbarData,
       contrast: false,
-      theme: "light",
+      theme: "light"
     };
   },
+  
   mounted() {
-    this.toolbar = new Toolbar(this.$refs.node, {});
+    this.toolbar = new Toolbar(this.$refs.toolbar_container, {
+      data: this.toolbarData
+    });
+
     this.toolbar.events.on("click", (id) => {
       switch (id) {
         case "theme": {
@@ -25,7 +25,7 @@ export default {
             checked,
             icon: `mdi mdi-${
               !checked ? "weather-night" : "white-balance-sunny"
-            }`,
+            }`
           });
           this.theme = checked ? "dark" : "light";
           setTheme(`${this.contrast ? "contrast-" : ""}${this.theme}`);
@@ -37,12 +37,14 @@ export default {
         }
       }
     });
-    this.toolbar.data.parse(store.toolbarData);
   },
-  beforeDestroy() {
-    if (this.toolbar) {
-      this.toolbar.destructor();
-    }
-  },
+
+  unmounted() {
+    this.toolbar?.destructor();
+  }
 };
 </script>
+
+<template>
+  <div ref="toolbar_container"></div>
+</template>
